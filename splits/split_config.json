@@ -1,0 +1,60 @@
+{
+  "dataset": "fastMRI knee multicoil validation, CORPD_FBK only",
+  "source_dir": "D:\\Research Results\\knee",
+  "n_subjects_available": 100,
+  "split": {
+    "policy": "subject-wise disjoint",
+    "seed": 0,
+    "slices_per_subject": 20,
+    "slice_rule": "central contiguous band",
+    "train_subjects": 15,
+    "train_slices": 300,
+    "test_subjects": 19,
+    "test_slices": 380,
+    "heldout_subjects": 66,
+    "matrix_uniform": "320x368 after readout crop",
+    "selection": "restricted to the 49 ky=368 subjects so data matches CUPID's hardcoded x_m_full buffer of (1,300,320,368) in src/train.py; no k-space cropping needed"
+  },
+  "undersampling": {
+    "acceleration_R": 4,
+    "mask": "equidistant (uniform) phase-encode",
+    "acs_lines": 24,
+    "mask_is_per_volume": true,
+    "note": "ky varies by volume (320-644), so the mask is generated per volume"
+  },
+  "coil_sensitivity": {
+    "source": "ACS region (24 central phase-encode lines)",
+    "estimator": "ACS low-resolution: Hann-windowed 24-line ACS block, inverse FFT per coil, divided by the root-sum-of-squares across coils; zeroed where RSS < 2% of max",
+    "implemented_in": "D:\\Research Results\\preprocessing\\prepare_cupid_data.py (acs_maps)",
+    "repo_provides_maps": false,
+    "repo_note": "CUPID computes no coil maps anywhere; load_data requires them in the input .npy",
+    "validation": {
+      "against": "reconstruction_rss in the source fastMRI file",
+      "corr": 0.999,
+      "nrmse": 0.062,
+      "sum_abs_S_squared_inside_object": 1.0
+    },
+    "alternative_not_used": "ESPIRiT (sigpy) - not installable while the sandbox has no network egress"
+  },
+  "network_input": {
+    "type": "CG-SENSE reconstruction of the R=4 data",
+    "role": "stands in for the routine clinical DICOM image CUPID trains on"
+  },
+  "fastmri_plus": {
+    "applied": true,
+    "annotation_file": "D:\\Research Results\\fastmri-plus\\Annotations\\knee.csv",
+    "boxes_in_file": 16167,
+    "files_in_file": 974,
+    "local_subjects_with_boxes": 72,
+    "policy": "test subjects drawn from box-bearing subjects first (seed 0)",
+    "test_subjects_annotated": 19,
+    "train_subjects_annotated": 11,
+    "note": "presence in knee.csv means >=1 box; files reviewed with no findings appear only in knee_file_list.csv"
+  },
+  "provenance": {
+    "generated_offline": true,
+    "revisit": [
+      "none open: repo defines no slice convention, matrix size now matches train.py"
+    ]
+  }
+}

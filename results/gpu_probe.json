@@ -1,0 +1,58 @@
+{
+  "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "vram_GiB": 4.0,
+  "torch": "2.6.0+cu124",
+  "python": "3.10.22",
+  "slice_shape": [
+    1,
+    15,
+    320,
+    368
+  ],
+  "mask_sampled_fraction": 0.372,
+  "note": "Unrolled net + parallel-imaging perturbation loss only. Compressibility term excluded (needs pytorch_wavelets, absent; runs once per slice at epoch 0). Perturbations are random tensors of the published magnitude, cost-equivalent to the repo's glyph patterns. One warm-up step then one timed step per config. Two heavier configs (U10 G15 P6 per-perturbation and summed backward) did not complete and are not reported.",
+  "runs": [
+    {
+      "config": "U6 G6 P2 per-pert bwd",
+      "unrolls": 6,
+      "cg_iter": 6,
+      "perturbations": 2,
+      "per_pert_backward": true,
+      "peak_GiB": 2.34,
+      "s_per_step": 7.399,
+      "h_per_slice_300ep": 0.62,
+      "predicted_GiB": 1.66,
+      "predicted_s_per_step": 2.7,
+      "mem_ratio": 1.41,
+      "time_ratio": 2.7
+    },
+    {
+      "config": "U8 G6 P4 per-pert bwd",
+      "unrolls": 8,
+      "cg_iter": 6,
+      "perturbations": 4,
+      "per_pert_backward": true,
+      "peak_GiB": 2.77,
+      "s_per_step": 19.117,
+      "h_per_slice_300ep": 1.59,
+      "predicted_GiB": 2.21,
+      "predicted_s_per_step": 5.9,
+      "mem_ratio": 1.25,
+      "time_ratio": 3.2
+    },
+    {
+      "config": "U10 G8 P6 per-pert bwd",
+      "unrolls": 10,
+      "cg_iter": 8,
+      "perturbations": 6,
+      "per_pert_backward": true,
+      "peak_GiB": 3.54,
+      "s_per_step": 69.741,
+      "h_per_slice_300ep": 5.81,
+      "predicted_GiB": 3.68,
+      "predicted_s_per_step": 10.4,
+      "mem_ratio": 0.96,
+      "time_ratio": 6.7
+    }
+  ]
+}

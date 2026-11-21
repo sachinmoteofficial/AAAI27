@@ -1,0 +1,26 @@
+{
+  "covariate_adjusted": {
+    "Cartilage - Partial Thickness loss/defect": -0.030556490954115237,
+    "Joint Effusion": 0.09199538265304683,
+    "Ligament - ACL High Grade Sprain": 0.008190221636096812,
+    "Ligament - ACL Low Grade sprain": -0.16480622736278638,
+    "Ligament - MCL Low-Mod Grade Sprain": 0.06478410035351342,
+    "Meniscus Tear": 0.01662916222710001,
+    "Patellar Retinaculum - High grade sprain": 0.10686168493176411
+  },
+  "raw": {
+    "Cartilage - Partial Thickness loss/defect": -0.02843419660110863,
+    "Joint Effusion": 0.15018635136740552,
+    "Ligament - ACL High Grade Sprain": -0.01518453870500837,
+    "Ligament - ACL Low Grade sprain": -0.21880240099770684,
+    "Ligament - MCL Low-Mod Grade Sprain": 0.1704816168004816,
+    "Meniscus Tear": 0.054815678713247946,
+    "Patellar Retinaculum - High grade sprain": 0.20874099930127468
+  },
+  "covariate_betas": {
+    "mean": 0.2173655590339017,
+    "std": 0.3102387935850385,
+    "contrast": 0.113304066296328,
+    "grad": 0.6825884862355204
+  }
+}

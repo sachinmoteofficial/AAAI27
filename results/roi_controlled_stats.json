@@ -1,0 +1,52 @@
+{
+  "n_roi": 218,
+  "n_slices": 141,
+  "n_subjects": 18,
+  "ssim_lesion": 0.6882680074884258,
+  "ssim_control": 0.6507586452323909,
+  "delta": 0.0375093622560348,
+  "ci": [
+    0.0064201894989815425,
+    0.06995378729767135
+  ],
+  "wilcoxon_p": 4.5777925647553425e-05,
+  "frac_lesion_worse": 0.3944954128440367,
+  "labels": {
+    "Ligament - ACL Low Grade sprain": {
+      "n": 7,
+      "delta": -0.21880240099770681
+    },
+    "Displaced Meniscal Tissue": {
+      "n": 2,
+      "delta": -0.11847139000892642
+    },
+    "Cartilage - Partial Thickness loss/defect": {
+      "n": 49,
+      "delta": -0.02843419310389733
+    },
+    "Ligament - ACL High Grade Sprain": {
+      "n": 21,
+      "delta": -0.015184539556503304
+    },
+    "LCL Complex - Low-Mod Grade Sprain": {
+      "n": 4,
+      "delta": 0.014743398129940022
+    },
+    "Meniscus Tear": {
+      "n": 97,
+      "delta": 0.05481567720776981
+    },
+    "Joint Effusion": {
+      "n": 21,
+      "delta": 0.15018634427161445
+    },
+    "Ligament - MCL Low-Mod Grade Sprain": {
+      "n": 11,
+      "delta": 0.1704816140911796
+    },
+    "Patellar Retinaculum - High grade sprain": {
+      "n": 6,
+      "delta": 0.20874101420243582
+    }
+  }
+}
