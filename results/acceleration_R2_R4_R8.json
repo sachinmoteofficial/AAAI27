@@ -1,0 +1,728 @@
+{
+  "R2": {
+    "pooled": {
+      "vs_size": {
+        "n_regions": 217,
+        "n_patients": 18,
+        "mean": 0.008462946260007428,
+        "ci_lo": 0.0018018195142333005,
+        "ci_hi": 0.019600821481638376,
+        "bootstrap_p": 0.002,
+        "patient": {
+          "n_patients": 18,
+          "mean": 0.014209341303510077,
+          "median": 0.0074558209663804775,
+          "wilcoxon_p": 0.0076904296875,
+          "n_pos": 14,
+          "n_neg": 4
+        }
+      },
+      "vs_placebo": {
+        "n_regions": 215,
+        "n_patients": 18,
+        "mean": 0.011196747775150607,
+        "ci_lo": -0.002498252746260823,
+        "ci_hi": 0.03418309630226603,
+        "bootstrap_p": 0.1892,
+        "patient": {
+          "n_patients": 18,
+          "mean": 0.013010039282885471,
+          "median": 0.00718793377554685,
+          "wilcoxon_p": 0.05385589599609375,
+          "n_pos": 12,
+          "n_neg": 6
+        }
+      }
+    },
+    "per_label": {
+      "Cartilage - Partial Thickness loss/defect": {
+        "n_regions": 49,
+        "n_patients": 9,
+        "vs_size": {
+          "n_regions": 49,
+          "n_patients": 9,
+          "mean": 0.010911651530749593,
+          "ci_lo": 0.0011423080572220783,
+          "ci_hi": 0.024463147125155432,
+          "bootstrap_p": 0.0308,
+          "patient": {
+            "n_patients": 9,
+            "mean": 0.009270604691959953,
+            "median": 0.00810708905460733,
+            "wilcoxon_p": 0.12890625,
+            "n_pos": 7,
+            "n_neg": 2
+          }
+        },
+        "vs_placebo": {
+          "n_regions": 49,
+          "n_patients": 9,
+          "mean": 0.007716654292113327,
+          "ci_lo": -0.005696257159793032,
+          "ci_hi": 0.024526629387479737,
+          "bootstrap_p": 0.302,
+          "patient": {
+            "n_patients": 9,
+            "mean": 0.006581838608695504,
+            "median": 0.0019677692741144983,
+            "wilcoxon_p": 0.65234375,
+            "n_pos": 5,
+            "n_neg": 4
+          }
+        }
+      },
+      "Displaced Meniscal Tissue": {
+        "n_regions": 2,
+        "n_patients": 1,
+        "vs_size": {
+          "n_regions": 2,
+          "n_patients": 1,
+          "mean": 0.0011133148277132632,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        },
+        "vs_placebo": {
+          "n_regions": 2,
+          "n_patients": 1,
+          "mean": -0.0024697076685157304,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        }
+      },
+      "Joint Effusion": {
+        "n_regions": 20,
+        "n_patients": 2,
+        "vs_size": {
+          "n_regions": 20,
+          "n_patients": 2,
+          "mean": -0.009048477734905835,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        },
+        "vs_placebo": {
+          "n_regions": 18,
+          "n_patients": 2,
+          "mean": -0.014420328520980895,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        }
+      },
+      "LCL Complex - Low-Mod Grade Sprain": {
+        "n_regions": 4,
+        "n_patients": 2,
+        "vs_size": {
+          "n_regions": 4,
+          "n_patients": 2,
+          "mean": 0.008370086946602295,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        },
+        "vs_placebo": {
+          "n_regions": 4,
+          "n_patients": 2,
+          "mean": -0.004929603083187739,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        }
+      },
+      "Ligament - ACL High Grade Sprain": {
+        "n_regions": 21,
+        "n_patients": 2,
+        "vs_size": {
+          "n_regions": 21,
+          "n_patients": 2,
+          "mean": -0.0006832169731745909,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        },
+        "vs_placebo": {
+          "n_regions": 21,
+          "n_patients": 2,
+          "mean": 0.0019184350701356183,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        }
+      },
+      "Ligament - ACL Low Grade sprain": {
+        "n_regions": 7,
+        "n_patients": 1,
+        "vs_size": {
+          "n_regions": 7,
+          "n_patients": 1,
+          "mean": -0.021951982903762022,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        },
+        "vs_placebo": {
+          "n_regions": 7,
+          "n_patients": 1,
+          "mean": -0.030229898406181604,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        }
+      },
+      "Ligament - MCL Low-Mod Grade Sprain": {
+        "n_regions": 11,
+        "n_patients": 5,
+        "vs_size": {
+          "n_regions": 11,
+          "n_patients": 5,
+          "mean": 0.024843247819458448,
+          "ci_lo": 0.009063262713144426,
+          "ci_hi": 0.046543777494220166,
+          "bootstrap_p": 0.0,
+          "patient": {
+            "n_patients": 5,
+            "mean": 0.023192867581911848,
+            "median": 0.012156703886674808,
+            "wilcoxon_p": 0.0625,
+            "n_pos": 5,
+            "n_neg": 0
+          }
+        },
+        "vs_placebo": {
+          "n_regions": 11,
+          "n_patients": 5,
+          "mean": 0.010245762088796805,
+          "ci_lo": 0.002382010357699049,
+          "ci_hi": 0.021362830108519346,
+          "bootstrap_p": 0.0,
+          "patient": {
+            "n_patients": 5,
+            "mean": 0.011796679717274525,
+            "median": 0.0026746447159779474,
+            "wilcoxon_p": 0.0625,
+            "n_pos": 5,
+            "n_neg": 0
+          }
+        }
+      },
+      "Meniscus Tear": {
+        "n_regions": 97,
+        "n_patients": 15,
+        "vs_size": {
+          "n_regions": 97,
+          "n_patients": 15,
+          "mean": 0.014033547565993733,
+          "ci_lo": 0.006128561878998117,
+          "ci_hi": 0.026876149829385538,
+          "bootstrap_p": 0.0,
+          "patient": {
+            "n_patients": 15,
+            "mean": 0.014673654426011287,
+            "median": 0.0072801060267744105,
+            "wilcoxon_p": 0.00537109375,
+            "n_pos": 13,
+            "n_neg": 2
+          }
+        },
+        "vs_placebo": {
+          "n_regions": 97,
+          "n_patients": 15,
+          "mean": 0.025391059584142263,
+          "ci_lo": 0.002744809773170966,
+          "ci_hi": 0.059189992460747104,
+          "bootstrap_p": 0.0108,
+          "patient": {
+            "n_patients": 15,
+            "mean": 0.017159049148672608,
+            "median": 0.00980831150478989,
+            "wilcoxon_p": 0.05535888671875,
+            "n_pos": 9,
+            "n_neg": 6
+          }
+        }
+      },
+      "Patellar Retinaculum - High grade sprain": {
+        "n_regions": 6,
+        "n_patients": 1,
+        "vs_size": {
+          "n_regions": 6,
+          "n_patients": 1,
+          "mean": -0.003244568746878581,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        },
+        "vs_placebo": {
+          "n_regions": 6,
+          "n_patients": 1,
+          "mean": -0.015150926312812507,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        }
+      }
+    }
+  },
+  "R4": {
+    "pooled": {
+      "vs_size": {
+        "n_regions": 217,
+        "n_patients": 18,
+        "mean": 0.04353133434186991,
+        "ci_lo": 0.005432109678723418,
+        "ci_hi": 0.08440187651196564,
+        "bootstrap_p": 0.0204,
+        "patient": {
+          "n_patients": 18,
+          "mean": 0.04576491487361038,
+          "median": 0.01788575912449603,
+          "wilcoxon_p": 0.12973785400390625,
+          "n_pos": 12,
+          "n_neg": 6
+        }
+      },
+      "vs_placebo": {
+        "n_regions": 215,
+        "n_patients": 18,
+        "mean": -0.07269794763502666,
+        "ci_lo": -0.13819466659274232,
+        "ci_hi": -0.00702300647168805,
+        "bootstrap_p": 0.0256,
+        "patient": {
+          "n_patients": 18,
+          "mean": -0.053673546737364825,
+          "median": -0.040545195244598896,
+          "wilcoxon_p": 0.11870574951171875,
+          "n_pos": 6,
+          "n_neg": 12
+        }
+      }
+    },
+    "per_label": {
+      "Cartilage - Partial Thickness loss/defect": {
+        "n_regions": 49,
+        "n_patients": 9,
+        "vs_size": {
+          "n_regions": 49,
+          "n_patients": 9,
+          "mean": -0.01331373115538867,
+          "ci_lo": -0.06360691935175991,
+          "ci_hi": 0.026452223286853246,
+          "bootstrap_p": 0.5256,
+          "patient": {
+            "n_patients": 9,
+            "mean": -0.016183941016397158,
+            "median": -0.006610831662962104,
+            "wilcoxon_p": 0.8203125,
+            "n_pos": 4,
+            "n_neg": 5
+          }
+        },
+        "vs_placebo": {
+          "n_regions": 49,
+          "n_patients": 9,
+          "mean": -0.18513987307729124,
+          "ci_lo": -0.24066620302911423,
+          "ci_hi": -0.12832612527546808,
+          "bootstrap_p": 0.0,
+          "patient": {
+            "n_patients": 9,
+            "mean": -0.17910631606329852,
+            "median": -0.17714910542644804,
+            "wilcoxon_p": 0.0078125,
+            "n_pos": 1,
+            "n_neg": 8
+          }
+        }
+      },
+      "Displaced Meniscal Tissue": {
+        "n_regions": 2,
+        "n_patients": 1,
+        "vs_size": {
+          "n_regions": 2,
+          "n_patients": 1,
+          "mean": -0.02961230309999946,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        },
+        "vs_placebo": {
+          "n_regions": 2,
+          "n_patients": 1,
+          "mean": -0.11078148547500843,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        }
+      },
+      "Joint Effusion": {
+        "n_regions": 20,
+        "n_patients": 2,
+        "vs_size": {
+          "n_regions": 20,
+          "n_patients": 2,
+          "mean": 0.012821210022571878,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        },
+        "vs_placebo": {
+          "n_regions": 18,
+          "n_patients": 2,
+          "mean": 0.006184853267226256,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        }
+      },
+      "LCL Complex - Low-Mod Grade Sprain": {
+        "n_regions": 4,
+        "n_patients": 2,
+        "vs_size": {
+          "n_regions": 4,
+          "n_patients": 2,
+          "mean": -0.0940561449795158,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        },
+        "vs_placebo": {
+          "n_regions": 4,
+          "n_patients": 2,
+          "mean": -0.20458391195803327,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        }
+      },
+      "Ligament - ACL High Grade Sprain": {
+        "n_regions": 21,
+        "n_patients": 2,
+        "vs_size": {
+          "n_regions": 21,
+          "n_patients": 2,
+          "mean": -0.023639821565917023,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        },
+        "vs_placebo": {
+          "n_regions": 21,
+          "n_patients": 2,
+          "mean": 0.015498073176491819,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        }
+      },
+      "Ligament - ACL Low Grade sprain": {
+        "n_regions": 7,
+        "n_patients": 1,
+        "vs_size": {
+          "n_regions": 7,
+          "n_patients": 1,
+          "mean": -0.20052275485297752,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        },
+        "vs_placebo": {
+          "n_regions": 7,
+          "n_patients": 1,
+          "mean": -0.32496274800466446,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        }
+      },
+      "Ligament - MCL Low-Mod Grade Sprain": {
+        "n_regions": 11,
+        "n_patients": 5,
+        "vs_size": {
+          "n_regions": 11,
+          "n_patients": 5,
+          "mean": 0.18579955095950076,
+          "ci_lo": 0.07426562653564613,
+          "ci_hi": 0.23785600826576145,
+          "bootstrap_p": 0.0,
+          "patient": {
+            "n_patients": 5,
+            "mean": 0.16311696763560057,
+            "median": 0.17447711367266527,
+            "wilcoxon_p": 0.0625,
+            "n_pos": 5,
+            "n_neg": 0
+          }
+        },
+        "vs_placebo": {
+          "n_regions": 11,
+          "n_patients": 5,
+          "mean": 0.02178167515386312,
+          "ci_lo": -0.0435447539133464,
+          "ci_hi": 0.0755759046528933,
+          "bootstrap_p": 0.4944,
+          "patient": {
+            "n_patients": 5,
+            "mean": 0.020085283720975924,
+            "median": 0.022510416339995953,
+            "wilcoxon_p": 0.625,
+            "n_pos": 3,
+            "n_neg": 2
+          }
+        }
+      },
+      "Meniscus Tear": {
+        "n_regions": 97,
+        "n_patients": 15,
+        "vs_size": {
+          "n_regions": 97,
+          "n_patients": 15,
+          "mean": 0.09828703406927995,
+          "ci_lo": 0.016714699385661006,
+          "ci_hi": 0.15333232937425684,
+          "bootstrap_p": 0.0252,
+          "patient": {
+            "n_patients": 15,
+            "mean": 0.04622872669458996,
+            "median": 0.12548539161130617,
+            "wilcoxon_p": 0.207763671875,
+            "n_pos": 9,
+            "n_neg": 6
+          }
+        },
+        "vs_placebo": {
+          "n_regions": 97,
+          "n_patients": 15,
+          "mean": -0.03773245170182853,
+          "ci_lo": -0.1210054673217184,
+          "ci_hi": 0.04152998476872004,
+          "bootstrap_p": 0.3836,
+          "patient": {
+            "n_patients": 15,
+            "mean": -0.0683716099852251,
+            "median": -0.04604310784216007,
+            "wilcoxon_p": 0.1353759765625,
+            "n_pos": 6,
+            "n_neg": 9
+          }
+        }
+      },
+      "Patellar Retinaculum - High grade sprain": {
+        "n_regions": 6,
+        "n_patients": 1,
+        "vs_size": {
+          "n_regions": 6,
+          "n_patients": 1,
+          "mean": 0.10002592267447934,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        },
+        "vs_placebo": {
+          "n_regions": 6,
+          "n_patients": 1,
+          "mean": -0.04331743551003089,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        }
+      }
+    }
+  },
+  "R8": {
+    "pooled": {
+      "vs_size": {
+        "n_regions": 217,
+        "n_patients": 18,
+        "mean": -0.03788247623274943,
+        "ci_lo": -0.057829463781170785,
+        "ci_hi": -0.020510920792331463,
+        "bootstrap_p": 0.0,
+        "patient": {
+          "n_patients": 18,
+          "mean": -0.025848955020963384,
+          "median": -0.026803036143695162,
+          "wilcoxon_p": 0.04827880859375,
+          "n_pos": 5,
+          "n_neg": 13
+        }
+      },
+      "vs_placebo": {
+        "n_regions": 215,
+        "n_patients": 18,
+        "mean": -0.07740756691499232,
+        "ci_lo": -0.11345312826169714,
+        "ci_hi": -0.04097905002983662,
+        "bootstrap_p": 0.0,
+        "patient": {
+          "n_patients": 18,
+          "mean": -0.06753773957628534,
+          "median": -0.06143385609208158,
+          "wilcoxon_p": 0.00041961669921875,
+          "n_pos": 2,
+          "n_neg": 16
+        }
+      }
+    },
+    "per_label": {
+      "Cartilage - Partial Thickness loss/defect": {
+        "n_regions": 49,
+        "n_patients": 9,
+        "vs_size": {
+          "n_regions": 49,
+          "n_patients": 9,
+          "mean": -0.04471213694500407,
+          "ci_lo": -0.08215883301005611,
+          "ci_hi": -0.022066040940762633,
+          "bootstrap_p": 0.0,
+          "patient": {
+            "n_patients": 9,
+            "mean": -0.04977969021065179,
+            "median": -0.027421290329505115,
+            "wilcoxon_p": 0.00390625,
+            "n_pos": 0,
+            "n_neg": 9
+          }
+        },
+        "vs_placebo": {
+          "n_regions": 49,
+          "n_patients": 9,
+          "mean": -0.05638764478687941,
+          "ci_lo": -0.10737884832110474,
+          "ci_hi": 0.00448821750886258,
+          "bootstrap_p": 0.0704,
+          "patient": {
+            "n_patients": 9,
+            "mean": -0.043246787220062095,
+            "median": -0.06495274019254656,
+            "wilcoxon_p": 0.203125,
+            "n_pos": 3,
+            "n_neg": 6
+          }
+        }
+      },
+      "Displaced Meniscal Tissue": {
+        "n_regions": 2,
+        "n_patients": 1,
+        "vs_size": {
+          "n_regions": 2,
+          "n_patients": 1,
+          "mean": -0.14463106160822176,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        },
+        "vs_placebo": {
+          "n_regions": 2,
+          "n_patients": 1,
+          "mean": -0.19560568888495652,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        }
+      },
+      "Joint Effusion": {
+        "n_regions": 20,
+        "n_patients": 2,
+        "vs_size": {
+          "n_regions": 20,
+          "n_patients": 2,
+          "mean": 0.004214740202779762,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        },
+        "vs_placebo": {
+          "n_regions": 18,
+          "n_patients": 2,
+          "mean": -0.05118858175200687,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        }
+      },
+      "LCL Complex - Low-Mod Grade Sprain": {
+        "n_regions": 4,
+        "n_patients": 2,
+        "vs_size": {
+          "n_regions": 4,
+          "n_patients": 2,
+          "mean": -0.0673380270262075,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        },
+        "vs_placebo": {
+          "n_regions": 4,
+          "n_patients": 2,
+          "mean": -0.16744438793399025,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        }
+      },
+      "Ligament - ACL High Grade Sprain": {
+        "n_regions": 21,
+        "n_patients": 2,
+        "vs_size": {
+          "n_regions": 21,
+          "n_patients": 2,
+          "mean": -0.06094921644523388,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        },
+        "vs_placebo": {
+          "n_regions": 21,
+          "n_patients": 2,
+          "mean": 0.021603433618637265,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        }
+      },
+      "Ligament - ACL Low Grade sprain": {
+        "n_regions": 7,
+        "n_patients": 1,
+        "vs_size": {
+          "n_regions": 7,
+          "n_patients": 1,
+          "mean": -0.09068846386970024,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        },
+        "vs_placebo": {
+          "n_regions": 7,
+          "n_patients": 1,
+          "mean": -0.21404632760679496,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        }
+      },
+      "Ligament - MCL Low-Mod Grade Sprain": {
+        "n_regions": 11,
+        "n_patients": 5,
+        "vs_size": {
+          "n_regions": 11,
+          "n_patients": 5,
+          "mean": 0.09945000740992999,
+          "ci_lo": 0.009504565468852366,
+          "ci_hi": 0.14480473471693361,
+          "bootstrap_p": 0.0384,
+          "patient": {
+            "n_patients": 5,
+            "mean": 0.07359402245401736,
+            "median": 0.12353419801714696,
+            "wilcoxon_p": 0.4375,
+            "n_pos": 4,
+            "n_neg": 1
+          }
+        },
+        "vs_placebo": {
+          "n_regions": 11,
+          "n_patients": 5,
+          "mean": -0.013065888359055906,
+          "ci_lo": -0.08367491366824316,
+          "ci_hi": 0.017596062121500604,
+          "bootstrap_p": 0.5796,
+          "patient": {
+            "n_patients": 5,
+            "mean": -0.035653097412022945,
+            "median": 0.011135540495085389,
+            "wilcoxon_p": 1.0,
+            "n_pos": 3,
+            "n_neg": 2
+          }
+        }
+      },
+      "Meniscus Tear": {
+        "n_regions": 97,
+        "n_patients": 15,
+        "vs_size": {
+          "n_regions": 97,
+          "n_patients": 15,
+          "mean": -0.04291893305332198,
+          "ci_lo": -0.06988634203918435,
+          "ci_hi": -0.023428337970853315,
+          "bootstrap_p": 0.0,
+          "patient": {
+            "n_patients": 15,
+            "mean": -0.055900679106786956,
+            "median": -0.03996281083542075,
+            "wilcoxon_p": 0.02154541015625,
+            "n_pos": 4,
+            "n_neg": 11
+          }
+        },
+        "vs_placebo": {
+          "n_regions": 97,
+          "n_patients": 15,
+          "mean": -0.09736054647757855,
+          "ci_lo": -0.1353804395883722,
+          "ci_hi": -0.0570972701547217,
+          "bootstrap_p": 0.0,
+          "patient": {
+            "n_patients": 15,
+            "mean": -0.09181521952317499,
+            "median": -0.0754679267224976,
+            "wilcoxon_p": 0.0008544921875,
+            "n_pos": 1,
+            "n_neg": 14
+          }
+        }
+      },
+      "Patellar Retinaculum - High grade sprain": {
+        "n_regions": 6,
+        "n_patients": 1,
+        "vs_size": {
+          "n_regions": 6,
+          "n_patients": 1,
+          "mean": -0.09522399797248889,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        },
+        "vs_placebo": {
+          "n_regions": 6,
+          "n_patients": 1,
+          "mean": -0.2108164872655575,
+          "note": "fewer than 3 patients: no CI or p-value reported"
+        }
+      }
+    }
+  }
+}

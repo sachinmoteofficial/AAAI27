@@ -1,0 +1,448 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage{aaai2027}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\usepackage{booktabs}
+\usepackage{amsmath}
+\setcounter{secnumdepth}{2}
+\pdfinfo{
+/TemplateVersion (2027.1)
+}
+
+\title{Lesion or Location? Negative Controls for Lesion-Level\\Fidelity Evaluation in Accelerated Knee MRI}
+
+\author{
+    Sachin Mote\textsuperscript{\rm 1},
+    Pranjali Changadeo Pingale\textsuperscript{\rm 2},
+    Alicem Koyun\textsuperscript{\rm 2}
+}
+\affiliations{
+    \textsuperscript{\rm 1}George Mason University, Fairfax, VA, United States\\
+    \textsuperscript{\rm 2}Westcliff University, Irvine, CA, United States\\
+    sachinmoteofficial@gmail.com, pranjalipingale@gmail.com, alicemkoyun@gmail.com
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Accelerated MRI reconstructions are increasingly scored inside
+radiologist-annotated lesion boxes, on the premise that a lesion box isolates
+what happens to the finding. We test that premise on fastMRI knee data with
+fastMRI+ annotations (217 boxes, 18 patients), reconstructed with
+unregularised CG-SENSE and zero-filling at nominal 2-, 4- and 8-fold
+acceleration. First, box registration fails silently: reading the
+annotations with the wrong vertical origin places none of 146 meniscus and
+cartilage boxes near the joint line, yet yields significant, plausible lesion
+effects, including a sign reversal between reconstructions. A joint-line check
+catches the error. Second, with correct registration the estimated lesion
+effect is set by the comparator rather than the lesion. At nominal 4-fold
+acceleration under CG-SENSE it is $+0.044$ SSIM against size-matched tissue,
+$+0.050$ against appearance-matched tissue, $-0.073$ against the same box on
+other slices of the same patient, and $-0.003$ $[-0.017, +0.011]$ against the
+adjacent slice. The same-position effect grows steadily with slice distance.
+Third, a per-finding result that passes a patient-level test (cartilage
+defects, $-0.185$, 8 of 9 patients, $p=0.008$) disappears when the comparator
+is restricted to nearby slices. Lesion-box evaluations need a registration
+check and a comparator that holds anatomy fixed; with one, we find no
+lesion-specific fidelity loss at nominal 4-fold acceleration.
+\end{abstract}
+
+\begin{links}
+\link{Code}{https://github.com/sachinmoteofficial/AAAI27}
+\end{links}
+
+\section{Introduction}
+
+Accelerated MRI acquires a fraction of $k$-space and reconstructs the rest,
+which shortens examinations and widens access to scanner time. Whether the
+shortened examination is still diagnostic depends on whether the
+reconstruction preserves findings, yet reconstructions are compared mainly by
+SSIM or PSNR over the whole image \citep{zbontar2018fastmri,muckley2021results}.
+Whole-image scores track radiologists' quality ratings only loosely
+\citep{mason2020iqm}, and the fastMRI challenges documented meniscal tears and
+small osteophytes lost by reconstructions that scored well
+\citep{knoll2020challenge}.
+
+Radiologist bounding boxes for fastMRI, released as fastMRI+
+\citep{zhao2022fastmriplus}, make a finer evaluation possible: compute the
+metric inside each lesion box and compare it with tissue elsewhere. This
+lesion-box evaluation needs no reader study and no trained detector, which
+makes it attractive for comparing many reconstructions. It also matters for
+reconstruction without raw data: methods such as CUPID
+\citep{alcalar2025cupid} train on images exported by the scanner and use an
+unregularised parallel-imaging reconstruction as network input and inside the
+consistency operator, so how that reconstruction treats lesions bears on what
+such networks see.
+
+A lesion-box comparison is only as good as its comparator. A lesion box
+differs from a tissue box elsewhere in at least three ways: it contains a
+finding, it sits at a particular anatomical position, and it covers tissue of
+a particular brightness and texture. SSIM depends on local mean and variance
+\citep{wang2004ssim}, and parallel-imaging error varies across the image, so
+position and appearance can produce a lesion effect on their own. We
+separate these factors with negative controls.
+
+Our contributions are:
+\begin{itemize}
+\item A registration check for fastMRI+ boxes, and evidence from our own
+earlier analysis that a coordinate-origin error yields significant,
+plausible and meaningless lesion effects.
+\item A comparison of comparators on the same 217 boxes: size-matched and
+appearance-matched tissue on the same slice, and the same box on other slices
+of the same patient, stratified by slice distance.
+\item Evidence that the estimated lesion effect changes sign with the
+comparator and grows with comparator distance, that a significant per-finding
+effect is an artifact of distant comparators, and that against the nearest
+comparator no lesion-specific loss is detectable at nominal $R\le4$.
+\item Code, subject splits and per-region results.
+\end{itemize}
+
+\section{Related Work}
+
+\textbf{Clinical evaluation of accelerated reconstruction.} Reader studies
+remain the reference standard; deep-learning reconstruction of knee MRI was
+interchangeable with conventional images for detecting internal derangement
+\citep{recht2020interchangeability}. Reader studies are expensive and rarely
+used to compare methods, so image metrics dominate, although SSIM correlated
+no better than RMSE with radiologists' scores \citep{mason2020iqm}.
+
+\textbf{Pathology-aware quantitative evaluation.} \citet{zhao2021pipeline}
+coupled reconstruction with a meniscal-tear detector and found detection
+failed on low-SNR CG-SENSE and on heavily accelerated reconstructions.
+\citet{chen2023pathology} compared metrics inside fastMRI+ brain boxes with
+normal patches for an end-to-end variational network and reported larger
+losses in pathological regions. \citet{morshuis2025mind} trained a detector on
+fastMRI+ knee data to show that reconstructions can miss small, rare
+pathologies, and \citet{cheng2020fnaf} showed that small synthetic features
+are systematically lost by trained networks. These studies compare lesion
+regions with normal regions or count detections; we ask whether such
+lesion-versus-normal differences reflect the finding or the comparator.
+
+\textbf{Reconstruction without fully sampled data.} Self-supervised methods
+such as SSDU \citep{yaman2020ssdu} remove the need for fully sampled
+references, and CUPID \citep{alcalar2025cupid} removes the need for raw
+$k$-space. Both rely on parallel imaging
+\citep{pruessmann1999sense,griswold2002grappa}, which motivates our choice of
+CG-SENSE.
+
+\section{Data and Reconstruction}
+
+\subsection{Cohort}
+We use the fastMRI multi-coil knee validation set
+\citep{zbontar2018fastmri,knoll2020fastmri}, restricted to coronal
+proton-density scans without fat suppression and to the 49 volumes with 368
+phase-encode lines, so that every scan has the same matrix. Volumes were split
+by subject into 15 for a future training experiment, 19 for testing and 15
+unused. Of the 19 test subjects, 18 carry at least one fastMRI+ bounding box;
+the remaining subject has only a study-level label. We score the central 20
+slices of each test volume (380 slices); 140 of them carry 217 boxes in nine
+finding categories. One patient contributes 35 boxes.
+
+\subsection{Registering the annotations}
+fastMRI+ boxes are given as $(x, y, w, h)$ on the $320\times320$
+root-sum-of-squares image. We crop reconstructions to the same field and
+convert with a bottom-left origin, $\text{row}_\text{top} = 320 - y - h$.
+Because an origin error causes no crash and no visibly odd numbers
+(Section~\ref{sec:reg}), we verify registration automatically. Meniscus-tear
+and cartilage-defect boxes must lie on the joint line, so for each such box
+we locate the joint line as the darkest row of the smoothed intensity profile
+over the box's columns and record its distance from the box centre. The
+pipeline stops if fewer than 80\% of these boxes lie within 15 pixels.
+
+\subsection{Undersampling and reconstruction}
+Readout oversampling is removed in the image domain ($640\to320$). Coil
+sensitivities are estimated from a Hann-windowed block of 24 autocalibration
+lines, normalised by root-sum-of-squares and zeroed below 2\% of the maximum;
+the combined reference agrees with the fastMRI reconstruction (correlation
+0.999, NRMSE 0.062). We keep every $R$th phase-encode line plus the
+autocalibration block and, as in the CUPID code, mark zero-padded lines as
+known. The realised sampled fractions at nominal $R=2,4,8$ are 0.58, 0.37 and
+0.27, so nominal $R=4$ is an effective acceleration of about 2.7. We
+reconstruct with the zero-filled adjoint and with unregularised CG-SENSE (30
+iterations, zero initialisation), the configuration the CUPID code uses for
+its parallel-imaging image. Whole-image SSIM under CG-SENSE is 0.959, 0.721
+and 0.470 at nominal $R=2,4,8$ (zero-filled 0.770 at $R=4$). Unless stated, results
+are for nominal $R=4$.
+
+\section{Comparators and Statistics}
+
+For each box we compute an SSIM map \citep{wang2004ssim} against the fully
+sampled reference (Gaussian window, $\sigma=1.5$, dynamic range set by the
+slice maximum) and average it inside the box; PSNR uses the in-box squared
+error with the same peak. Each lesion box is compared with three comparators
+(Figure~\ref{fig:example}).
+
+\textbf{Size-matched (SM).} Five boxes of identical size drawn at random on
+the same slice inside an eroded tissue mask ($>8\%$ of the slice maximum),
+disjoint from all annotations. This is the comparison lesion-box studies
+usually make.
+
+\textbf{Appearance-matched (AM).} Among up to 2{,}000 same-size candidates
+inside the body on the same slice, the five closest to the lesion box in
+standardised mean intensity, Michelson contrast and standard deviation.
+
+\textbf{Same position (SP).} The identical box at identical coordinates on
+each slice of the same patient, within the scored band, that carries no
+fastMRI+ annotation (2{,}147 placements; 215 boxes have at least one). SP
+holds position exactly but anatomy only approximately, and less so the
+further the comparator slice lies from the lesion slice. We therefore report
+SP for all slices and stratified by slice distance $d$: adjacent ($d=1$) and
+nearby ($d\le3$).
+
+The \emph{lesion effect} is in-box SSIM of the lesion box minus the mean over
+its comparator boxes; negative values mean the lesion is reconstructed less
+faithfully. Boxes are clustered within patients, so the patient is the unit
+of inference: we report the mean over boxes with a patient-clustered bootstrap
+95\% interval (resampling patients), the number of patients with positive and
+negative mean effects, and a Wilcoxon signed-rank test on patient means. We
+give no intervals or tests for categories with fewer than three patients.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig_example.pdf}
+\caption{\textbf{Example and comparators} (patient file1000831, slice 21,
+partial-thickness cartilage defect). Left to right: fully sampled reference,
+CG-SENSE at nominal $R=4$, absolute error, SSIM map, and a zoom of the box.
+Teal: lesion box (in-box SSIM 0.47). White: size-matched controls (mean
+0.50). Orange: appearance-matched controls. The same coordinates on slice 14,
+seven slices away, score 0.96; this distance effect is the subject of
+Section~\ref{sec:dist}.}
+\label{fig:example}
+\end{figure*}
+
+\section{Results}
+
+\subsection{Registration errors are silent}
+\label{sec:reg}
+
+With the bottom-left origin, 93.8\% of meniscus-tear boxes (median distance
+2.0 pixels, $n=97$) and 95.9\% of cartilage-defect boxes (median 5.0 pixels,
+$n=49$) lie within 15 pixels of the joint line. With a top-left origin the same
+boxes fall in femoral or tibial marrow and none lies within 15 pixels (median
+80.0 and 85.5 pixels; Figure~\ref{fig:reg}).
+
+The misregistered boxes nonetheless produce results that look like findings.
+Against size-matched controls, CG-SENSE scores them higher than tissue
+($+0.038$ SSIM, region-level Wilcoxon $p=4.6\times10^{-5}$), zero-filling
+scores them lower ($-0.024$, $p=1.9\times10^{-7}$), and SSIM and PSNR disagree
+in sign. An earlier version of this study made this error and interpreted
+these numbers as properties of pathology. Nothing in them indicates that the
+boxes contain marrow; only an anatomical check does. Region-level tests
+compound the problem: treating 217 boxes from 18 patients as independent, the
+CG-SENSE effect looked overwhelming, whereas at the patient level it was
+$p=0.099$.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/fig_registration.pdf}
+\caption{\textbf{Registration check.} Distance from each meniscus-tear or
+cartilage-defect box centre ($n=146$) to the joint line under the correct
+(bottom-left) and an incorrect (top-left) vertical origin.}
+\label{fig:reg}
+\end{figure}
+
+\subsection{The comparator sets the sign}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/fig_comparators.pdf}
+\caption{\textbf{The lesion effect depends on the comparator.} (a) CG-SENSE at
+nominal $R=4$: lesion effect for all findings (18 patients) and for
+partial-thickness cartilage defects (9 patients) against each comparator.
+(b) Same-position lesion effect for all findings as a function of the
+distance to the comparator slice, at nominal $R=2,4,8$. Bars and bands are
+patient-clustered 95\% bootstrap intervals.}
+\label{fig:comp}
+\end{figure}
+
+
+With correct registration, the lesion effect depends on which comparator is
+used (Table~\ref{tab:main}, Figure~\ref{fig:comp}a). Against size-matched
+tissue, lesion boxes score higher than tissue under both reconstructions.
+This reflects appearance: lesion boxes sit on the meniscus, cartilage and
+ligaments and are much darker and higher in contrast than size-matched
+controls (mean intensity 0.127 vs.\ 0.335, Michelson contrast 0.88 vs.\
+0.50). Appearance matching closes most of that gap (0.148, 0.85) but leaves
+the effect unchanged ($+0.050$), because lesions and their appearance-matched
+controls still lie in different places. Holding position fixed reverses the
+sign under CG-SENSE: the same box on unannotated slices of the same patient
+scores higher than the lesion ($-0.073$), with 12 of 18 patients negative.
+
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{lrcc}
+\toprule
+Comparator & $\Delta$SSIM & 95\% CI & pts $+$/$-$ ($p$) \\
+\midrule
+\multicolumn{4}{l}{\emph{CG-SENSE}} \\
+Size-matched & $+0.044$ & $[+0.005, +0.084]$ & 12/6 (0.13) \\
+Appearance-matched & $+0.050$ & $[+0.016, +0.085]$ & 11/7 (0.05) \\
+Same position, all & $-0.073$ & $[-0.138, -0.007]$ & 6/12 (0.12) \\
+Same position, $d\le3$ & $-0.023$ & $[-0.050, +0.000]$ & 6/12 (0.14) \\
+Same position, $d=1$ & $-0.003$ & $[-0.017, +0.011]$ & 8/10 (0.90) \\
+\midrule
+\multicolumn{4}{l}{\emph{Zero-filled}} \\
+Size-matched & $+0.036$ & $[+0.010, +0.065]$ & 12/6 (0.04) \\
+Appearance-matched & $+0.028$ & $[+0.002, +0.057]$ & 12/6 (0.13) \\
+Same position, all & $+0.026$ & $[-0.003, +0.057]$ & 12/6 (0.03) \\
+Same position, $d\le3$ & $+0.004$ & $[-0.005, +0.018]$ & 9/9 (0.33) \\
+Same position, $d=1$ & $+0.006$ & $[-0.004, +0.015]$ & 10/8 (0.33) \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{Lesion effect by comparator} at nominal $R=4$ (217 boxes, 18
+patients; same-position rows use the 215, 103 and 36 boxes with a comparator
+slice at that distance). $\Delta$ is lesion minus comparator in-box SSIM.
+Intervals are patient-clustered bootstrap; $p$ is a Wilcoxon test on the 18
+patient means.}
+\label{tab:main}
+\end{table}
+
+\subsection{Comparator distance}
+\label{sec:dist}
+
+The same-position effect is not a fixed property of the lesions. It grows
+with the distance between the lesion slice and the comparator slice
+(Figure~\ref{fig:comp}b): under CG-SENSE at nominal $R=4$ it is $-0.003$ for
+the adjacent slice, $-0.039$ at three slices and about $-0.08$ beyond five.
+Example: in Figure~\ref{fig:example}, the comparator seven slices away scores
+0.96 against the lesion's 0.47. Distant slices
+cut through different anatomy at the same coordinates, so a distant
+same-position comparator re-introduces the confounding it was meant to
+remove. Restricted to the adjacent slice, the lesion effect is $-0.003$
+$[-0.017, +0.011]$ under CG-SENSE and $+0.006$ $[-0.004, +0.015]$ under
+zero-filling, with patients split evenly. The interval excludes a pooled
+lesion-specific loss larger than about 0.02 SSIM, roughly a tenth of the gap
+between whole-image SSIM at nominal $R=2$ and $R=4$.
+
+
+
+\subsection{A per-finding false positive}
+
+Per finding, the same pattern produces a result that would pass review.
+Against same-position boxes on all slices, partial-thickness cartilage
+defects score $-0.185$ $[-0.241, -0.128]$ SSIM under CG-SENSE, worse in 8 of 9
+patients (Wilcoxon $p=0.008$); PSNR agrees ($-4.8$\,dB, 8 of 9). Against
+size-matched or appearance-matched tissue, the same boxes show nothing
+($-0.013$ and $+0.026$). Restricting the comparator to nearby slices removes
+the deficit: $-0.040$ $[-0.140, +0.007]$ for $d\le3$ (7 patients) and
+$+0.016$ $[-0.007, +0.039]$ for $d=1$ (4 patients). Its size grows with
+distance, from $-0.051$ at three slices to $-0.188$ at six to nine and $-0.220$
+beyond ten. Meniscus tears, the largest category,
+show the same distance dependence with no deficit nearby ($-0.007$
+$[-0.039, +0.016]$ for $d\le3$, 14 patients). We had singled out cartilage
+defects for attention after an exploratory look at the same data, so the
+all-slice result should in any case have been treated as a hypothesis; the
+distance analysis shows it does not survive.
+
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{2.4pt}
+\begin{tabular}{lrrrrr}
+\toprule
+& & & \multicolumn{3}{c}{Same position} \\
+\cmidrule(lr){4-6}
+Finding (boxes, pts) & SM & AM & all & $d\le3$ & $d=1$ \\
+\midrule
+Cartilage (49, 9) & $-0.013$ & $+0.026$ & $\mathbf{-0.185}$ & $-0.040$ & $+0.016$ \\
+Meniscus (97, 15) & $\mathbf{+0.098}$ & $\mathbf{+0.097}$ & $-0.038$ & $-0.007$ & $-0.004$ \\
+MCL (11, 5) & $\mathbf{+0.186}$ & $\mathbf{+0.151}$ & $+0.022$ & $\mathbf{-0.018}$ & -- \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{Lesion effect by finding} (CG-SENSE, nominal $R=4$,
+$\Delta$SSIM): partial-thickness cartilage defect, meniscus tear and
+low--moderate MCL sprain. Bold: patient-clustered 95\% interval excludes zero. Categories
+with fewer than five patients (effusion, ACL and LCL sprains, retinaculum,
+displaced meniscal tissue; 60 boxes) are not shown. The SP subsets contain
+fewer patients (cartilage 7 and 4; meniscus 14 and 12; MCL 4 and 0).}
+\label{tab:labels}
+\end{table}
+
+\subsection{Acceleration}
+
+At nominal $R=2$ all lesion effects are small (size-matched $+0.009$,
+same position $+0.011$). At nominal $R=8$ the size-matched effect turns
+negative ($-0.038$ $[-0.058, -0.021]$), and the same-position effect is
+negative at all distances (all slices $-0.077$,
+16 of 18 patients negative, $p=0.0004$; $d\le3$ $-0.033$ $[-0.052, -0.015]$,
+14 of 18, $p=0.007$), but it still grows with distance and is not
+distinguishable from zero for the adjacent slice ($-0.009$
+$[-0.029, +0.009]$). At $R=8$, where whole-image SSIM falls to 0.47, a
+lesion-specific loss is plausible, but we cannot separate it from
+through-plane anatomy with this design.
+
+\section{Discussion}
+
+Lesion-box metrics are a reasonable step toward clinically relevant
+evaluation, but the unit of interest is the finding, not the box. Two things
+stand between them. The first is registration, whose failure is silent: our
+misregistered analysis produced significant effects, a sign reversal between
+reconstructions and a disagreement between metrics, all of which read
+naturally as findings. The second is the comparator. Lesions sit on anatomy
+that is darker, higher in contrast and differently placed than tissue drawn
+elsewhere on the slice, and SSIM responds to all three. In our data the
+estimated lesion effect ranged from $+0.050$ to $-0.073$ depending only on the
+comparator, and a per-finding deficit significant at the patient level was
+produced entirely by distant comparators.
+
+The comparator that best holds anatomy fixed, the same box on the adjacent
+slice, showed no detectable lesion-specific loss under either reconstruction
+at nominal $R\le4$, in SSIM or in PSNR ($-0.04$\,dB $[-0.40, +0.34]$ under
+CG-SENSE). This does not show that reconstructions preserve
+findings: SSIM in a small box is a coarse proxy for diagnostic content, and
+the adjacent-slice analysis covers only 36 boxes. It shows that the
+lesion-specific signal, if present, is much smaller than the differences that
+comparator choice alone creates.
+
+For evaluating reconstructions, including those trained without raw data, we
+suggest three inexpensive practices: verify box registration against anatomy
+before computing any metric; use a comparator that holds position and anatomy
+fixed, such as the adjacent slice, and report how effects change with
+comparator distance; and make the patient, not the box, the unit of
+inference.
+
+\textbf{Limitations.} Eighteen patients, of whom only three finding
+categories contribute five or more, limit per-finding conclusions, and the
+nearest-slice comparisons have few boxes. Adjacent slices still differ
+through-plane, and fastMRI+ is not exhaustive, so an unannotated slice is not
+necessarily normal. Many boxes are small (median 325 pixels for cartilage
+defects), so in-box SSIM is influenced by pixels within a few window widths of
+the box edge. Coil maps are estimated from the autocalibration block rather
+than with ESPIRiT \citep{uecker2014espirit}. We evaluate two classical
+reconstructions; learned reconstructions \citep{hammernik2018variational} may
+behave differently, and the training split we release is intended for that
+comparison.
+
+\section{Conclusion}
+
+Comparing lesion boxes with tissue elsewhere measures where lesions are and
+what they look like as much as whether reconstruction preserves them, and an
+undetected registration error can make such comparisons look meaningful.
+With registration verified and a comparator that holds anatomy fixed, we find
+no lesion-specific fidelity loss at nominal 4-fold acceleration in fastMRI
+knee data.
+
+\section*{Data and Ethics Statement}
+This is a secondary analysis of de-identified, publicly released data. fastMRI
+data were obtained from NYU Langone Health under the fastMRI data use
+agreement \citep{zbontar2018fastmri,knoll2020fastmri}, and fastMRI+
+annotations from their public release \citep{zhao2022fastmriplus}. No imaging
+data are redistributed; the repository contains code, subject splits and
+derived per-region results.
+
+\section*{Acknowledgments}
+Data used in this study were obtained from the NYU fastMRI initiative
+(fastmri.med.nyu.edu). We thank its investigators for releasing raw $k$-space
+data, and the fastMRI+ team for releasing clinical pathology annotations.
+
+\bibliography{refs}
+
+\end{document}

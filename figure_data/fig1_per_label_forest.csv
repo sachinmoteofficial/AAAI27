@@ -1,0 +1,10 @@
+label,n_regions,n_patients,vs_size_mean,vs_size_ci_lo,vs_size_ci_hi,vs_size_p,vs_app_mean,vs_app_ci_lo,vs_app_ci_hi,vs_app_p,vs_placebo_mean,vs_placebo_ci_lo,vs_placebo_ci_hi,vs_placebo_p
+Cartilage - Partial Thickness loss/defect,49,9,-0.01331,-0.06361,0.02645,0.5256,0.02582,-0.03173,0.07805,0.4508,-0.18514,-0.24067,-0.12833,0.0
+Displaced Meniscal Tissue,2,1,-0.02961,,,,-0.16435,,,,-0.11078,,,
+Joint Effusion,20,2,0.01282,,,,0.00536,,,,0.00618,,,
+LCL Complex - Low-Mod Grade Sprain,4,2,-0.09406,,,,0.00101,,,,-0.20458,,,
+Ligament - ACL High Grade Sprain,21,2,-0.02364,,,,-0.03592,,,,0.0155,,,
+Ligament - ACL Low Grade sprain,7,1,-0.20052,,,,-0.10363,,,,-0.32496,,,
+Ligament - MCL Low-Mod Grade Sprain,11,5,0.1858,0.07427,0.23786,0.0,0.15105,0.05693,0.19497,0.0,0.02178,-0.04354,0.07558,0.4944
+Meniscus Tear,97,15,0.09829,0.01671,0.15333,0.0252,0.09708,0.03323,0.14121,0.0092,-0.03773,-0.12101,0.04153,0.3836
+Patellar Retinaculum - High grade sprain,6,1,0.10003,,,,0.02211,,,,-0.04332,,,

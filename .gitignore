@@ -4,6 +4,8 @@ knee/
 brain/
 *.h5
 *.npy
+# exception: the four 320x320 figure arrays are derived, not imaging data
+!figure_data/example_*.npy
 *.tar
 *.tar.xz
 
@@ -19,3 +21,5 @@ __pycache__/
 *.bbl
 *.blg
 *.pdf
+# exception: figure PDFs needed to compile the paper source
+!paper/figures/*.pdf

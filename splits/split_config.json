@@ -1,60 +1,93 @@
 {
-  "dataset": "fastMRI knee multicoil validation, CORPD_FBK only",
-  "source_dir": "D:\\Research Results\\knee",
-  "n_subjects_available": 100,
-  "split": {
-    "policy": "subject-wise disjoint",
-    "seed": 0,
-    "slices_per_subject": 20,
-    "slice_rule": "central contiguous band",
-    "train_subjects": 15,
-    "train_slices": 300,
-    "test_subjects": 19,
-    "test_slices": 380,
-    "heldout_subjects": 66,
-    "matrix_uniform": "320x368 after readout crop",
-    "selection": "restricted to the 49 ky=368 subjects so data matches CUPID's hardcoded x_m_full buffer of (1,300,320,368) in src/train.py; no k-space cropping needed"
+ "dataset": "fastMRI knee multicoil validation, CORPD_FBK only",
+ "source_dir": "D:\\Research Results\\knee",
+ "n_subjects_available": 100,
+ "split": {
+  "policy": "subject-wise disjoint",
+  "seed": 0,
+  "slices_per_subject": 20,
+  "slice_rule": "central contiguous band",
+  "train_subjects": 15,
+  "train_slices": 300,
+  "test_subjects": 19,
+  "test_slices": 380,
+  "heldout_subjects": 66,
+  "matrix_uniform": "320x368 after readout crop",
+  "selection": "restricted to the 49 ky=368 subjects so data matches CUPID's hardcoded x_m_full buffer of (1,300,320,368) in src/train.py; no k-space cropping needed"
+ },
+ "undersampling": {
+  "acceleration_R": 4,
+  "mask": "equidistant (uniform) phase-encode",
+  "acs_lines": 24,
+  "mask_is_per_volume": true,
+  "note": "ky varies by volume (320-644), so the mask is generated per volume"
+ },
+ "coil_sensitivity": {
+  "source": "ACS region (24 central phase-encode lines)",
+  "estimator": "ACS low-resolution: Hann-windowed 24-line ACS block, inverse FFT per coil, divided by the root-sum-of-squares across coils; zeroed where RSS < 2% of max",
+  "implemented_in": "D:\\Research Results\\preprocessing\\prepare_cupid_data.py (acs_maps)",
+  "repo_provides_maps": false,
+  "repo_note": "CUPID computes no coil maps anywhere; load_data requires them in the input .npy",
+  "validation": {
+   "against": "reconstruction_rss in the source fastMRI file",
+   "corr": 0.999,
+   "nrmse": 0.062,
+   "sum_abs_S_squared_inside_object": 1.0
   },
-  "undersampling": {
-    "acceleration_R": 4,
-    "mask": "equidistant (uniform) phase-encode",
-    "acs_lines": 24,
-    "mask_is_per_volume": true,
-    "note": "ky varies by volume (320-644), so the mask is generated per volume"
-  },
-  "coil_sensitivity": {
-    "source": "ACS region (24 central phase-encode lines)",
-    "estimator": "ACS low-resolution: Hann-windowed 24-line ACS block, inverse FFT per coil, divided by the root-sum-of-squares across coils; zeroed where RSS < 2% of max",
-    "implemented_in": "D:\\Research Results\\preprocessing\\prepare_cupid_data.py (acs_maps)",
-    "repo_provides_maps": false,
-    "repo_note": "CUPID computes no coil maps anywhere; load_data requires them in the input .npy",
-    "validation": {
-      "against": "reconstruction_rss in the source fastMRI file",
-      "corr": 0.999,
-      "nrmse": 0.062,
-      "sum_abs_S_squared_inside_object": 1.0
-    },
-    "alternative_not_used": "ESPIRiT (sigpy) - not installable while the sandbox has no network egress"
-  },
-  "network_input": {
-    "type": "CG-SENSE reconstruction of the R=4 data",
-    "role": "stands in for the routine clinical DICOM image CUPID trains on"
-  },
-  "fastmri_plus": {
-    "applied": true,
-    "annotation_file": "D:\\Research Results\\fastmri-plus\\Annotations\\knee.csv",
-    "boxes_in_file": 16167,
-    "files_in_file": 974,
-    "local_subjects_with_boxes": 72,
-    "policy": "test subjects drawn from box-bearing subjects first (seed 0)",
-    "test_subjects_annotated": 19,
-    "train_subjects_annotated": 11,
-    "note": "presence in knee.csv means >=1 box; files reviewed with no findings appear only in knee_file_list.csv"
-  },
-  "provenance": {
-    "generated_offline": true,
-    "revisit": [
-      "none open: repo defines no slice convention, matrix size now matches train.py"
-    ]
+  "alternative_not_used": "ESPIRiT (sigpy) - not installable while the sandbox has no network egress"
+ },
+ "network_input": {
+  "type": "CG-SENSE reconstruction of the R=4 data",
+  "role": "stands in for the routine clinical DICOM image CUPID trains on"
+ },
+ "fastmri_plus": {
+  "applied": true,
+  "annotation_file": "D:\\Research Results\\fastmri-plus\\Annotations\\knee.csv",
+  "boxes_in_file": 16167,
+  "files_in_file": 974,
+  "local_subjects_with_boxes": 72,
+  "policy": "test subjects drawn from box-bearing subjects first (seed 0)",
+  "note": "Selection tested only for presence in knee.csv, which includes study-level rows with empty x/y/width/height. file1001715.h5 carries a single study-level row (slice 0, study_level=Yes, label 'artifact') and no bounding box, so 19 test subjects appear in knee.csv but only 18 contribute scorable regions.",
+  "test_subjects_in_annotation_file": 19,
+  "test_subjects_with_boxes": 18,
+  "train_subjects_in_annotation_file": 11,
+  "train_subjects_with_boxes": 11,
+  "box_bearing_test_subjects": [
+   "file1000041.h5",
+   "file1000182.h5",
+   "file1000190.h5",
+   "file1000389.h5",
+   "file1000464.h5",
+   "file1000625.h5",
+   "file1000660.h5",
+   "file1000759.h5",
+   "file1000769.h5",
+   "file1000831.h5",
+   "file1001170.h5",
+   "file1001184.h5",
+   "file1001202.h5",
+   "file1001298.h5",
+   "file1001585.h5",
+   "file1002187.h5",
+   "file1002382.h5",
+   "file1002546.h5"
+  ],
+  "study_level_only_subjects": {
+   "file1001715.h5": [
+    "artifact"
+   ]
   }
+ },
+ "provenance": {
+  "generated_offline": true,
+  "revisit": [
+   "none open: repo defines no slice convention, matrix size now matches train.py"
+  ]
+ },
+ "annotation_coordinates": {
+  "convention": "fastMRI+ y is measured from the BOTTOM of the 320x320 reconstruction",
+  "conversion": "row_top = 320 - y - h",
+  "implemented_in": "v2/scripts/common.py (box_row_top, box_slices)",
+  "verified_by": "registration check against the joint line; see v2/results/registration_check.json"
+ }
 }

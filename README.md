@@ -1,93 +1,71 @@
-# Pathology-dependent fidelity in accelerated knee MRI
+# Lesion or Location? Negative controls for lesion-level fidelity in accelerated knee MRI
 
-Code, splits and results for *"A Single Fidelity Score Conceals Pathology-Dependent
-Loss in Accelerated Knee MRI"* (W3PHIAI-27 submission).
+Code, subject splits and per-region results for the W3PHIAI-27 paper
+*Lesion or Location? Negative Controls for Lesion-Level Fidelity Evaluation in
+Accelerated Knee MRI*.
 
-We measure whether accelerated reconstruction treats radiologist-annotated
-findings differently from surrounding tissue, using fastMRI knee data with
-fastMRI+ bounding boxes. **No model is trained anywhere in this pipeline** — the
-reconstructions are zero-filling and CG-SENSE, the latter being the operator
-that raw-data-free training methods use to build their training targets.
+The study asks whether scoring a reconstruction inside a fastMRI+ lesion box
+measures what happens to the finding. No model is trained. Reconstructions are
+the zero-filled adjoint and unregularised CG-SENSE (30 iterations) at nominal
+R = 2, 4, 8.
 
-## Headline results
+## Main results (CG-SENSE, nominal R = 4, SSIM; 217 boxes, 18 patients)
 
-| quantity | value |
-|---|---|
-| test slices / patients | 380 / 19 |
-| annotated slices / lesion regions | 141 / 218 |
-| lesion vs matched control, CG-SENSE, SSIM | **+0.038** (95% CI +0.006 to +0.070), p = 4.6e-5 |
-| lesion vs matched control, zero-filled, SSIM | **−0.024** (95% CI −0.036 to −0.013), p = 1.9e-7 |
-| lesion vs matched control, CG-SENSE, PSNR | −0.064 dB, p = 0.81 |
+Lesion effect = in-box SSIM of the lesion minus the mean of its comparator boxes.
+Intervals are patient-clustered bootstrap; p is a Wilcoxon test on patient means.
 
-The comparison reverses sign between reconstructions, and again between metrics.
-Per finding (CG-SENSE): meniscus tear +0.055 (97 regions, 15 patients),
-partial-thickness cartilage defect −0.028 (49 regions, 9 patients).
+| comparator | effect | 95% CI | patients +/- (p) |
+|---|---|---|---|
+| size-matched tissue, same slice | +0.044 | [+0.005, +0.084] | 12/6 (0.13) |
+| appearance-matched tissue, same slice | +0.050 | [+0.016, +0.085] | 11/7 (0.05) |
+| same box, all unannotated slices | -0.073 | [-0.138, -0.007] | 6/12 (0.12) |
+| same box, slices within 3 | -0.023 | [-0.050, +0.000] | 6/12 (0.14) |
+| same box, adjacent slice | -0.003 | [-0.017, +0.011] | 8/10 (0.90) |
 
-## What is NOT in this repository
+* The estimated lesion effect is set by the comparator and grows with the
+  distance to the comparator slice.
+* Partial-thickness cartilage defects score -0.185 against all unannotated
+  slices (8 of 9 patients worse), but +0.016 against the adjacent slice: the
+  apparent deficit comes from distant comparators.
+* Registration check: with the correct bottom-left origin
+  (`row_top = 320 - y - h`), 93.8% of meniscus-tear and 95.9% of
+  cartilage-defect boxes lie within 15 px of the joint line; with a top-left
+  origin, none do.
 
-- **fastMRI imaging data.** Requires a signed licence from NYU Langone; obtain it
-  at <https://fastmri.med.nyu.edu/>. Nothing derived from the raw k-space is
-  redistributed here.
-- **fastMRI+ annotations.** Fetch `Annotations/knee.csv` from
-  <https://github.com/microsoft/fastmri-plus> under its own licence.
-- **Preprocessed inputs** (`cupid_data/`, ~26 GB of `.npy`) — regenerate with
-  `preprocessing/prepare_cupid_data.py`.
-- **The CUPID repository.** Clone separately from
-  <https://github.com/ualcalar17/CUPID>; only our loader patch is included here.
+## Coordinate convention
+
+fastMRI+ `y` is measured from the bottom of the 320x320 image. The conversion is
+defined once in `scripts/common.py` (`box_row_top`). Every analysis script runs a
+registration check first and stops if fewer than 80% of meniscus/cartilage boxes
+lie within 15 px of the joint line.
 
 ## Reproducing
 
-Requires Python 3.10+, `pip install -r requirements.txt`. Paths are set at the
-top of each script. All timings are from a 16-core CPU; no GPU is used.
+Requires Python 3.10+, NumPy, SciPy, pandas, h5py, matplotlib. Data paths are set
+at the top of each script.
 
-```
-python preprocessing/prepare_cupid_data.py      # build inputs, 680 slices,  ~9 min
-python preprocessing/run_baseline_metrics.py    # whole-image vs in-box,     ~39 min
-python preprocessing/analyze_baseline.py        # statistics for the above
-python preprocessing/run_roi_controlled.py      # lesion vs matched controls,~16 min
-python preprocessing/run_sweep_covariates.py    # R=2/4/8 + ROI covariates,  ~43 min
-python preprocessing/run_arms_acs.py            # zero-filled arm, ACS sweep,~42 min
-python preprocessing/make_figures.py            # figures 2 and 3
-```
+    python scripts/run_main_R4.py                 # all comparators, ZF and CG-SENSE, R=4
+    python scripts/run_stats_R4.py                # pooled and per-finding contrasts
+    python scripts/run_accel.py 2                 # CG-SENSE acceleration arm
+    python scripts/run_accel.py 8
+    python scripts/run_accel_stats.py
+    python scripts/run_distance_stats.py results  # same-position effect by slice distance
+    python scripts/make_figure_data.py
+    python scripts/make_paper_figures.py . figures
+
+## Not included
+
+* fastMRI imaging data (requires the NYU Langone fastMRI data use agreement).
+* fastMRI+ annotations (download from the fastMRI+ repository under its licence).
 
 ## Layout
 
-```
-preprocessing/   data preparation, reconstruction, metrics, figures, GPU probe
-splits/          subject-wise split, slice lists, volume index, split_config.json
-results/         per-slice and per-region tables plus derived statistics (JSON)
-figures/         figures as they appear in the paper
-paper/           LaTeX source and generated tables
-```
+    scripts/      coordinate conversion, reconstruction, comparators, statistics, figures
+    splits/       subject-wise split (15 train, 19 test of which 18 carry boxes, 15 unused)
+    results/      per-region and per-placement tables, JSON statistics
+    figure_data/  figure source data
+    figures/      paper figures
+    paper/        LaTeX source
 
-## Protocol
-
-- Acquisition: fastMRI knee `CORPD_FBK`, restricted to the 49 volumes with 368
-  phase-encode lines so matrix size is constant. Readout oversampling removed
-  640 -> 320 in the image domain.
-- Coil maps: Hann-windowed ACS block, inverse FFT per coil, divided by
-  root-sum-of-squares, zeroed below 2% of max. Validated against
-  `reconstruction_rss`: correlation 0.999, NRMSE 0.062.
-- Mask: equidistant phase encode, central ACS block, signal-free lines marked
-  known. Realised sampled fraction 0.582 / 0.372 / 0.266 at R = 2 / 4 / 8.
-- Reconstructions: zero-filled adjoint, and CG-SENSE at 30 iterations, mu = 0.
-- Controls: five regions per lesion box, identical size, inside eroded tissue,
-  disjoint from every annotated box on that slice.
-- Statistics: two-sided Wilcoxon signed-rank over regions; 95% intervals are
-  subject-clustered bootstrap percentiles (5000 resamples over patients).
-
-## A note on the GPU probe
-
-`preprocessing/probe_cupid_cost.py` measures CUPID's per-slice VRAM and step
-time. On an RTX 3050 (4 GB) the published configuration (10 unrolls, 15 CG
-iterations, 6 perturbations) does not fit; measured costs with a
-per-perturbation backward are 2.34 GiB / 7.4 s per step at 6 unrolls, and
-3.54 GiB / 69.7 s per step at 10 unrolls with 8 CG iterations. Results in
-`results/gpu_probe.json`. This supports the follow-up study and is not used in
-the paper.
-
-## Follow-up
-
-`splits/` also contains a 15-patient / 300-slice training split this paper does
-not use. It is released for the next experiment: training a raw-data-free
-reconstruction on those slices and re-running this protocol on its outputs.
+The `results_v1/` folder, if present, holds the earlier analysis that used the
+wrong vertical origin; it is kept for transparency and is not used in the paper.

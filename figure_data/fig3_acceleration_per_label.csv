@@ -1,0 +1,28 @@
+R,label,n_regions,n_patients,vs_size_mean,vs_size_ci_lo,vs_size_ci_hi,vs_size_p,vs_placebo_mean,vs_placebo_ci_lo,vs_placebo_ci_hi,vs_placebo_p
+2,Cartilage - Partial Thickness loss/defect,49,9,0.01091,0.00114,0.02446,0.0308,0.00772,-0.0057,0.02453,0.302
+2,Displaced Meniscal Tissue,2,1,0.00111,,,,-0.00247,,,
+2,Joint Effusion,20,2,-0.00905,,,,-0.01442,,,
+2,LCL Complex - Low-Mod Grade Sprain,4,2,0.00837,,,,-0.00493,,,
+2,Ligament - ACL High Grade Sprain,21,2,-0.00068,,,,0.00192,,,
+2,Ligament - ACL Low Grade sprain,7,1,-0.02195,,,,-0.03023,,,
+2,Ligament - MCL Low-Mod Grade Sprain,11,5,0.02484,0.00906,0.04654,0.0,0.01025,0.00238,0.02136,0.0
+2,Meniscus Tear,97,15,0.01403,0.00613,0.02688,0.0,0.02539,0.00274,0.05919,0.0108
+2,Patellar Retinaculum - High grade sprain,6,1,-0.00324,,,,-0.01515,,,
+4,Cartilage - Partial Thickness loss/defect,49,9,-0.01331,-0.06361,0.02645,0.5256,-0.18514,-0.24067,-0.12833,0.0
+4,Displaced Meniscal Tissue,2,1,-0.02961,,,,-0.11078,,,
+4,Joint Effusion,20,2,0.01282,,,,0.00618,,,
+4,LCL Complex - Low-Mod Grade Sprain,4,2,-0.09406,,,,-0.20458,,,
+4,Ligament - ACL High Grade Sprain,21,2,-0.02364,,,,0.0155,,,
+4,Ligament - ACL Low Grade sprain,7,1,-0.20052,,,,-0.32496,,,
+4,Ligament - MCL Low-Mod Grade Sprain,11,5,0.1858,0.07427,0.23786,0.0,0.02178,-0.04354,0.07558,0.4944
+4,Meniscus Tear,97,15,0.09829,0.01671,0.15333,0.0252,-0.03773,-0.12101,0.04153,0.3836
+4,Patellar Retinaculum - High grade sprain,6,1,0.10003,,,,-0.04332,,,
+8,Cartilage - Partial Thickness loss/defect,49,9,-0.04471,-0.08216,-0.02207,0.0,-0.05639,-0.10738,0.00449,0.0704
+8,Displaced Meniscal Tissue,2,1,-0.14463,,,,-0.19561,,,
+8,Joint Effusion,20,2,0.00421,,,,-0.05119,,,
+8,LCL Complex - Low-Mod Grade Sprain,4,2,-0.06734,,,,-0.16744,,,
+8,Ligament - ACL High Grade Sprain,21,2,-0.06095,,,,0.0216,,,
+8,Ligament - ACL Low Grade sprain,7,1,-0.09069,,,,-0.21405,,,
+8,Ligament - MCL Low-Mod Grade Sprain,11,5,0.09945,0.0095,0.1448,0.0384,-0.01307,-0.08367,0.0176,0.5796
+8,Meniscus Tear,97,15,-0.04292,-0.06989,-0.02343,0.0,-0.09736,-0.13538,-0.0571,0.0
+8,Patellar Retinaculum - High grade sprain,6,1,-0.09522,,,,-0.21082,,,

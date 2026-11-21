@@ -1,0 +1,219 @@
+file,h,joint_line_row,label,offset_as_given,offset_corrected,slice,w,x,y
+file1000041.h5,14,124,Cartilage - Partial Thickness loss/defect,63.0,9.0,24,18,196,180
+file1000041.h5,9,132,Cartilage - Partial Thickness loss/defect,50.5,5.5,25,34,87,178
+file1000041.h5,11,144,Cartilage - Partial Thickness loss/defect,37.5,5.5,26,17,195,176
+file1000041.h5,15,146,Cartilage - Partial Thickness loss/defect,34.5,6.5,27,15,198,173
+file1000041.h5,8,141,Meniscus Tear,47.0,9.0,27,19,218,184
+file1000041.h5,11,131,Meniscus Tear,52.5,5.5,28,40,201,178
+file1000182.h5,83,77,Ligament - MCL Low-Mod Grade Sprain,72.5,93.5,21,16,252,108
+file1000182.h5,79,185,Ligament - MCL Low-Mod Grade Sprain,39.5,10.5,22,17,249,106
+file1000182.h5,76,166,Ligament - MCL Low-Mod Grade Sprain,24.0,12.0,23,19,246,104
+file1000190.h5,69,183,Ligament - MCL Low-Mod Grade Sprain,40.5,5.5,18,20,63,108
+file1000190.h5,14,124,Meniscus Tear,70.0,2.0,19,52,198,187
+file1000190.h5,73,170,Ligament - MCL Low-Mod Grade Sprain,26.5,6.5,19,20,65,107
+file1000190.h5,14,124,Meniscus Tear,70.0,2.0,20,46,205,187
+file1000190.h5,76,170,Ligament - MCL Low-Mod Grade Sprain,26.0,6.0,20,19,66,106
+file1000190.h5,13,124,Meniscus Tear,69.5,2.5,21,41,212,187
+file1000190.h5,80,129,Ligament - MCL Low-Mod Grade Sprain,17.0,45.0,21,19,68,106
+file1000190.h5,12,124,Meniscus Tear,69.0,3.0,22,36,219,187
+file1000190.h5,12,124,Meniscus Tear,69.0,3.0,23,30,226,187
+file1000190.h5,13,126,Meniscus Tear,70.5,2.5,24,14,84,190
+file1000190.h5,11,124,Meniscus Tear,69.5,2.5,24,31,223,188
+file1000190.h5,13,126,Meniscus Tear,69.5,1.5,25,19,84,189
+file1000190.h5,11,125,Meniscus Tear,69.5,0.5,25,32,220,189
+file1000389.h5,15,108,Meniscus Tear,102.5,1.5,21,49,215,203
+file1000389.h5,18,106,Meniscus Tear,104.0,4.0,22,38,227,201
+file1000389.h5,20,106,Meniscus Tear,102.0,6.0,23,27,239,198
+file1000389.h5,29,135,Ligament - ACL Low Grade sprain,57.5,7.5,24,18,156,178
+file1000389.h5,13,104,Cartilage - Partial Thickness loss/defect,112.5,0.5,24,57,81,210
+file1000389.h5,8,109,Cartilage - Partial Thickness loss/defect,103.0,1.0,24,44,205,208
+file1000389.h5,23,112,Meniscus Tear,95.5,0.5,24,17,252,196
+file1000389.h5,36,146,Ligament - ACL Low Grade sprain,42.0,14.0,25,19,155,170
+file1000389.h5,13,104,Cartilage - Partial Thickness loss/defect,112.5,0.5,25,56,80,210
+file1000389.h5,8,108,Cartilage - Partial Thickness loss/defect,104.0,0.0,25,42,205,208
+file1000389.h5,21,110,Meniscus Tear,97.5,2.5,25,26,243,197
+file1000389.h5,43,170,Ligament - ACL Low Grade sprain,13.5,33.5,26,20,155,162
+file1000389.h5,14,104,Cartilage - Partial Thickness loss/defect,112.0,0.0,26,55,80,209
+file1000389.h5,9,109,Cartilage - Partial Thickness loss/defect,103.5,1.5,26,40,204,208
+file1000389.h5,11,107,Meniscus Tear,108.5,2.5,26,16,60,210
+file1000389.h5,20,110,Meniscus Tear,99.0,1.0,26,35,233,199
+file1000389.h5,50,174,Ligament - ACL Low Grade sprain,5.0,33.0,27,20,155,154
+file1000389.h5,14,105,Cartilage - Partial Thickness loss/defect,110.0,0.0,27,53,79,208
+file1000389.h5,9,110,Cartilage - Partial Thickness loss/defect,101.5,1.5,27,38,203,207
+file1000389.h5,11,109,Meniscus Tear,105.5,3.5,27,23,59,209
+file1000389.h5,18,110,Meniscus Tear,99.0,1.0,27,44,224,200
+file1000389.h5,57,120,Ligament - ACL Low Grade sprain,54.5,25.5,28,21,154,146
+file1000389.h5,14,106,Cartilage - Partial Thickness loss/defect,109.0,1.0,28,52,79,208
+file1000389.h5,9,111,Cartilage - Partial Thickness loss/defect,100.5,2.5,28,36,203,207
+file1000389.h5,12,109,Meniscus Tear,104.0,2.0,28,29,61,207
+file1000389.h5,17,111,Meniscus Tear,98.5,0.5,28,53,214,201
+file1000389.h5,63,123,Ligament - ACL Low Grade sprain,46.5,27.5,29,22,154,138
+file1000389.h5,14,110,Cartilage - Partial Thickness loss/defect,104.0,4.0,29,51,78,207
+file1000389.h5,10,113,Cartilage - Partial Thickness loss/defect,98.0,4.0,29,34,202,206
+file1000389.h5,18,129,Meniscus Tear,82.0,20.0,29,16,135,202
+file1000389.h5,13,110,Meniscus Tear,102.5,2.5,29,35,64,206
+file1000389.h5,15,113,Meniscus Tear,96.5,2.5,29,62,205,202
+file1000389.h5,37,122,Ligament - ACL Low Grade sprain,32.5,43.5,30,14,167,136
+file1000389.h5,14,113,Meniscus Tear,98.0,4.0,30,41,67,204
+file1000389.h5,13,117,Meniscus Tear,93.5,7.5,30,71,196,204
+file1000464.h5,63,164,Ligament - MCL Low-Mod Grade Sprain,7.5,0.5,18,18,234,125
+file1000464.h5,68,156,Ligament - MCL Low-Mod Grade Sprain,4.0,4.0,19,19,231,126
+file1000464.h5,12,115,Meniscus Tear,90.0,0.0,23,18,216,199
+file1000464.h5,13,115,Meniscus Tear,89.5,0.5,24,28,204,198
+file1000464.h5,14,117,Meniscus Tear,87.0,1.0,25,37,192,197
+file1000464.h5,15,121,Meniscus Tear,82.5,4.5,26,46,180,196
+file1000625.h5,13,131,Meniscus Tear,57.5,0.5,17,34,80,182
+file1000625.h5,13,129,Meniscus Tear,61.5,0.5,18,36,77,184
+file1000625.h5,14,128,Meniscus Tear,64.0,0.0,19,39,73,185
+file1000625.h5,15,129,Meniscus Tear,64.5,2.5,20,41,69,186
+file1000625.h5,14,122,Cartilage - Partial Thickness loss/defect,73.0,3.0,21,49,82,188
+file1000625.h5,15,128,Meniscus Tear,66.5,2.5,21,44,65,187
+file1000625.h5,14,120,Cartilage - Partial Thickness loss/defect,75.0,5.0,22,42,90,188
+file1000625.h5,16,128,Meniscus Tear,68.0,4.0,22,46,61,188
+file1000625.h5,15,119,Cartilage - Partial Thickness loss/defect,75.5,6.5,23,34,98,187
+file1000625.h5,17,127,Meniscus Tear,70.5,4.5,23,49,58,189
+file1000625.h5,16,118,Cartilage - Partial Thickness loss/defect,77.0,7.0,24,27,105,187
+file1000625.h5,18,128,Meniscus Tear,69.0,5.0,24,52,60,188
+file1000625.h5,16,232,Cartilage - Partial Thickness loss/defect,38.0,106.0,25,19,113,186
+file1000625.h5,19,129,Meniscus Tear,67.5,5.5,25,56,61,187
+file1000625.h5,20,132,Meniscus Tear,64.0,8.0,26,60,63,186
+file1000625.h5,22,124,Meniscus Tear,71.0,1.0,27,64,65,184
+file1000625.h5,23,125,Meniscus Tear,69.5,0.5,28,68,67,183
+file1000660.h5,55,65,Ligament - MCL Low-Mod Grade Sprain,84.5,105.5,24,17,40,122
+file1000660.h5,22,154,LCL Complex - Low-Mod Grade Sprain,8.0,4.0,27,14,251,151
+file1000660.h5,23,163,LCL Complex - Low-Mod Grade Sprain,1.5,4.5,28,20,248,150
+file1000759.h5,12,97,Meniscus Tear,126.0,0.0,22,15,241,217
+file1000759.h5,12,96,Meniscus Tear,127.0,1.0,23,19,238,217
+file1000759.h5,12,96,Meniscus Tear,127.0,1.0,24,23,235,217
+file1000759.h5,13,96,Meniscus Tear,127.5,0.5,25,27,232,217
+file1000759.h5,13,97,Meniscus Tear,126.5,0.5,26,30,229,217
+file1000759.h5,13,98,Meniscus Tear,125.5,1.5,27,34,226,217
+file1000759.h5,13,100,Meniscus Tear,121.5,1.5,28,37,221,215
+file1000759.h5,13,197,Meniscus Tear,23.5,97.5,29,39,216,214
+file1000769.h5,16,97,Meniscus Tear,127.0,1.0,25,17,243,216
+file1000769.h5,16,99,Meniscus Tear,124.0,2.0,26,21,238,215
+file1000769.h5,15,198,Meniscus Tear,23.5,99.5,27,25,232,214
+file1000769.h5,15,196,Meniscus Tear,24.5,96.5,28,30,226,213
+file1000769.h5,15,196,Meniscus Tear,23.5,95.5,29,34,220,212
+file1000831.h5,14,123,Meniscus Tear,71.0,3.0,19,58,195,187
+file1000831.h5,15,124,Meniscus Tear,70.5,1.5,20,48,210,187
+file1000831.h5,4,114,Cartilage - Partial Thickness loss/defect,85.0,7.0,21,8,107,197
+file1000831.h5,16,124,Meniscus Tear,70.0,2.0,21,38,224,186
+file1000831.h5,7,113,Cartilage - Partial Thickness loss/defect,86.5,7.5,22,19,99,196
+file1000831.h5,17,124,Meniscus Tear,70.5,1.5,22,28,239,186
+file1000831.h5,8,112,Cartilage - Partial Thickness loss/defect,88.0,8.0,23,13,102,196
+file1000831.h5,18,126,Meniscus Tear,68.0,0.0,23,18,253,185
+file1000831.h5,17,125,Meniscus Tear,70.5,0.5,24,26,244,187
+file1000831.h5,15,126,Meniscus Tear,69.5,1.5,25,33,234,188
+file1000831.h5,13,127,Cartilage - Partial Thickness loss/defect,79.5,13.5,26,25,217,200
+file1000831.h5,14,127,Meniscus Tear,69.0,3.0,26,41,225,189
+file1000831.h5,11,130,Cartilage - Partial Thickness loss/defect,76.5,16.5,27,28,214,201
+file1000831.h5,13,121,Meniscus Tear,75.5,2.5,27,48,216,190
+file1000831.h5,9,123,Cartilage - Partial Thickness loss/defect,85.5,11.5,28,29,208,204
+file1000831.h5,17,123,Meniscus Tear,74.5,0.5,28,52,214,189
+file1001170.h5,157,60,Joint Effusion,22.5,177.5,9,128,111,4
+file1001170.h5,174,60,Joint Effusion,32.0,168.0,10,89,168,5
+file1001170.h5,167,60,Joint Effusion,33.5,166.5,11,72,184,10
+file1001170.h5,110,60,Joint Effusion,59.0,141.0,12,47,212,64
+file1001170.h5,140,69,Joint Effusion,32.0,150.0,12,45,64,31
+file1001170.h5,126,60,Joint Effusion,73.0,127.0,13,45,217,70
+file1001170.h5,140,68,Joint Effusion,29.0,155.0,13,43,65,27
+file1001170.h5,116,60,Joint Effusion,77.0,123.0,14,48,215,79
+file1001170.h5,138,95,Joint Effusion,6.0,136.0,14,39,60,20
+file1001170.h5,150,115,Joint Effusion,21.0,111.0,15,46,60,19
+file1001170.h5,79,60,Joint Effusion,88.5,111.5,15,23,237,109
+file1001170.h5,14,148,Ligament - ACL High Grade Sprain,41.0,17.0,16,31,145,182
+file1001170.h5,22,146,Ligament - ACL High Grade Sprain,43.0,15.0,17,29,147,178
+file1001170.h5,23,144,Ligament - ACL High Grade Sprain,46.5,14.5,18,27,150,179
+file1001170.h5,27,143,Ligament - ACL High Grade Sprain,43.5,9.5,19,26,151,173
+file1001170.h5,32,143,Ligament - ACL High Grade Sprain,40.0,6.0,20,25,152,167
+file1001170.h5,36,151,Ligament - ACL High Grade Sprain,28.0,10.0,21,24,153,161
+file1001170.h5,41,159,Ligament - ACL High Grade Sprain,16.5,14.5,22,23,154,155
+file1001170.h5,10,109,Meniscus Tear,101.0,1.0,23,10,248,205
+file1001170.h5,45,164,Ligament - ACL High Grade Sprain,7.5,15.5,23,22,155,149
+file1001170.h5,10,112,Meniscus Tear,98.0,2.0,24,10,245,205
+file1001170.h5,50,129,Ligament - ACL High Grade Sprain,39.0,23.0,24,21,156,143
+file1001170.h5,10,112,Meniscus Tear,99.0,3.0,25,11,243,206
+file1001170.h5,54,128,Ligament - ACL High Grade Sprain,36.0,28.0,25,20,157,137
+file1001170.h5,10,111,Meniscus Tear,101.0,3.0,26,12,241,207
+file1001170.h5,48,132,Ligament - ACL High Grade Sprain,23.0,33.0,26,23,154,131
+file1001170.h5,10,111,Meniscus Tear,101.0,3.0,27,12,239,207
+file1001170.h5,42,131,Ligament - ACL High Grade Sprain,15.0,43.0,27,26,151,125
+file1001184.h5,9,136,Displaced Meniscal Tissue,51.5,3.5,17,28,111,183
+file1001184.h5,9,136,Meniscus Tear,59.5,11.5,18,38,103,191
+file1001184.h5,7,136,Displaced Meniscal Tissue,53.5,5.5,18,22,119,186
+file1001184.h5,24,135,Ligament - ACL High Grade Sprain,53.0,3.0,18,29,143,176
+file1001184.h5,10,129,Cartilage - Partial Thickness loss/defect,57.0,5.0,19,32,95,181
+file1001184.h5,9,136,Meniscus Tear,57.5,9.5,19,28,111,189
+file1001184.h5,29,139,Ligament - ACL High Grade Sprain,44.5,2.5,19,28,144,169
+file1001184.h5,11,120,Cartilage - Partial Thickness loss/defect,70.5,9.5,20,42,94,185
+file1001184.h5,34,162,Ligament - ACL High Grade Sprain,18.0,22.0,20,27,145,163
+file1001184.h5,5,118,Cartilage - Partial Thickness loss/defect,72.5,11.5,21,24,91,188
+file1001184.h5,39,141,Ligament - ACL High Grade Sprain,35.5,2.5,21,26,146,157
+file1001184.h5,70,176,Ligament - MCL Low-Mod Grade Sprain,18.0,14.0,21,10,259,123
+file1001184.h5,44,129,Ligament - ACL High Grade Sprain,44.0,18.0,22,25,147,151
+file1001184.h5,50,229,Ligament - ACL High Grade Sprain,59.0,79.0,23,24,147,145
+file1001184.h5,55,214,Ligament - ACL High Grade Sprain,47.5,60.5,24,23,148,139
+file1001184.h5,47,195,Ligament - ACL High Grade Sprain,36.5,33.5,25,21,147,135
+file1001184.h5,39,110,Ligament - ACL High Grade Sprain,40.5,59.5,26,19,146,131
+file1001202.h5,11,105,Cartilage - Partial Thickness loss/defect,109.5,0.5,18,29,94,209
+file1001202.h5,12,105,Cartilage - Partial Thickness loss/defect,110.0,0.0,19,30,93,209
+file1001202.h5,8,117,Meniscus Tear,86.0,0.0,19,9,228,199
+file1001202.h5,12,106,Cartilage - Partial Thickness loss/defect,108.0,0.0,20,31,92,208
+file1001202.h5,10,116,Meniscus Tear,90.0,2.0,20,10,229,201
+file1001202.h5,12,106,Cartilage - Partial Thickness loss/defect,107.0,1.0,21,31,90,207
+file1001202.h5,7,106,Cartilage - Partial Thickness loss/defect,98.5,9.5,21,27,189,201
+file1001202.h5,13,108,Cartilage - Partial Thickness loss/defect,105.5,1.5,22,32,89,207
+file1001202.h5,9,108,Cartilage - Partial Thickness loss/defect,95.5,8.5,22,25,184,199
+file1001202.h5,35,149,LCL Complex - Low-Mod Grade Sprain,14.5,7.5,22,20,228,146
+file1001202.h5,13,104,Cartilage - Partial Thickness loss/defect,108.5,3.5,23,33,87,206
+file1001202.h5,12,108,Cartilage - Partial Thickness loss/defect,97.0,7.0,23,30,186,199
+file1001202.h5,52,113,LCL Complex - Low-Mod Grade Sprain,49.0,45.0,23,24,225,136
+file1001202.h5,8,113,Cartilage - Partial Thickness loss/defect,87.0,7.0,24,27,193,196
+file1001298.h5,65,60,Patellar Retinaculum - High grade sprain,59.5,140.5,14,31,209,87
+file1001298.h5,76,60,Patellar Retinaculum - High grade sprain,72.0,128.0,15,30,215,94
+file1001298.h5,75,60,Patellar Retinaculum - High grade sprain,69.5,130.5,16,30,220,92
+file1001298.h5,58,60,Patellar Retinaculum - High grade sprain,72.0,128.0,17,27,225,103
+file1001298.h5,59,60,Patellar Retinaculum - High grade sprain,70.5,129.5,18,25,232,101
+file1001298.h5,66,60,Patellar Retinaculum - High grade sprain,80.0,120.0,19,24,235,107
+file1001298.h5,10,128,Cartilage - Partial Thickness loss/defect,60.0,4.0,21,36,175,183
+file1001298.h5,11,132,Cartilage - Partial Thickness loss/defect,58.5,2.5,22,29,182,185
+file1001298.h5,12,132,Cartilage - Partial Thickness loss/defect,60.0,4.0,23,30,180,186
+file1001298.h5,5,126,Cartilage - Partial Thickness loss/defect,61.5,6.5,24,29,190,185
+file1001298.h5,8,148,Meniscus Tear,21.0,3.0,24,10,66,165
+file1001298.h5,8,127,Cartilage - Partial Thickness loss/defect,61.0,5.0,25,31,193,184
+file1001298.h5,14,146,Meniscus Tear,24.0,4.0,25,13,65,163
+file1001298.h5,8,128,Cartilage - Partial Thickness loss/defect,59.0,5.0,26,32,192,183
+file1001298.h5,14,146,Meniscus Tear,26.0,2.0,26,10,67,165
+file1001585.h5,13,173,Meniscus Tear,35.5,61.5,25,23,129,202
+file1002187.h5,9,116,Meniscus Tear,87.5,0.5,22,17,81,199
+file1002187.h5,11,116,Meniscus Tear,88.5,0.5,23,18,80,199
+file1002187.h5,9,109,Meniscus Tear,102.5,0.5,24,11,238,207
+file1002187.h5,9,110,Meniscus Tear,100.5,0.5,25,13,232,206
+file1002187.h5,9,110,Meniscus Tear,100.5,0.5,26,16,227,206
+file1002187.h5,9,112,Meniscus Tear,97.5,1.5,27,18,221,205
+file1002382.h5,16,123,Meniscus Tear,69.0,5.0,21,17,68,184
+file1002382.h5,10,121,Meniscus Tear,80.0,2.0,22,8,249,196
+file1002382.h5,15,122,Meniscus Tear,70.5,5.5,22,17,67,185
+file1002382.h5,10,120,Meniscus Tear,81.0,1.0,23,10,246,196
+file1002382.h5,15,122,Meniscus Tear,71.5,4.5,23,17,66,186
+file1002382.h5,11,119,Meniscus Tear,81.5,0.5,24,13,244,195
+file1002382.h5,15,121,Meniscus Tear,73.5,4.5,24,16,65,187
+file1002382.h5,11,119,Meniscus Tear,81.5,0.5,25,15,241,195
+file1002382.h5,14,120,Meniscus Tear,75.0,5.0,25,16,64,188
+file1002382.h5,14,116,Cartilage - Partial Thickness loss/defect,77.0,11.0,26,18,196,186
+file1002382.h5,11,119,Meniscus Tear,80.5,1.5,26,17,239,194
+file1002382.h5,12,120,Meniscus Tear,80.0,0.0,27,19,236,194
+file1002382.h5,12,120,Meniscus Tear,80.0,0.0,28,22,234,194
+file1002546.h5,92,60,Joint Effusion,58.0,142.0,11,56,87,72
+file1002546.h5,129,60,Joint Effusion,11.5,188.5,11,104,164,7
+file1002546.h5,79,60,Joint Effusion,67.5,132.5,12,47,83,88
+file1002546.h5,127,164,Joint Effusion,86.5,78.5,12,93,176,14
+file1002546.h5,66,60,Joint Effusion,78.0,122.0,13,38,79,105
+file1002546.h5,126,156,Joint Effusion,73.0,81.0,13,81,188,20
+file1002546.h5,52,60,Joint Effusion,87.0,113.0,14,29,74,121
+file1002546.h5,125,150,Joint Effusion,61.5,81.5,14,70,200,26
+file1002546.h5,124,144,Joint Effusion,49.0,81.0,15,58,212,33
+file1002546.h5,123,171,Joint Effusion,70.5,48.5,16,47,225,39
+file1002546.h5,9,123,Cartilage - Partial Thickness loss/defect,65.5,8.5,22,20,216,184
+file1002546.h5,8,122,Cartilage - Partial Thickness loss/defect,67.0,9.0,23,19,214,185

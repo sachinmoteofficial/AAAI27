@@ -1,0 +1,16 @@
+{
+  "Cartilage - Partial Thickness loss/defect": {
+    "n": 49,
+    "frac_within_tol_as_given": 0.0,
+    "frac_within_tol_corrected": 0.9591836734693877,
+    "median_offset_as_given": 85.5,
+    "median_offset_corrected": 5.0
+  },
+  "Meniscus Tear": {
+    "n": 97,
+    "frac_within_tol_as_given": 0.0,
+    "frac_within_tol_corrected": 0.9381443298969072,
+    "median_offset_as_given": 80.0,
+    "median_offset_corrected": 2.0
+  }
+}

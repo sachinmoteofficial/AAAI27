@@ -1,0 +1,84 @@
+{
+  "file": "file1000831.h5",
+  "slice": 21,
+  "label": "Cartilage - Partial Thickness loss/defect",
+  "R": 4,
+  "acs": 24,
+  "image_shape": [
+    320,
+    320
+  ],
+  "box_raw_csv": {
+    "x": 107,
+    "y_bottom_origin": 197,
+    "w": 8,
+    "h": 4
+  },
+  "box_array_indices": {
+    "row_top": 119,
+    "col_left": 107,
+    "h": 4,
+    "w": 8
+  },
+  "size_matched_controls_row_col": [
+    [
+      302,
+      76
+    ],
+    [
+      312,
+      28
+    ],
+    [
+      236,
+      178
+    ],
+    [
+      52,
+      234
+    ],
+    [
+      307,
+      156
+    ]
+  ],
+  "appearance_matched_controls_row_col": [
+    [
+      281,
+      253
+    ],
+    [
+      281,
+      248
+    ],
+    [
+      294,
+      89
+    ],
+    [
+      289,
+      251
+    ],
+    [
+      18,
+      244
+    ]
+  ],
+  "ssim_lesion_cg": 0.4654431464150548,
+  "ssim_size_control_cg": 0.495443607121706,
+  "contrast_vs_placebo": -0.43756127925589683,
+  "arrays": {
+    "ref": "example_ref.npy",
+    "cg": "example_cg.npy",
+    "err": "example_err.npy",
+    "ssim": "example_ssim.npy"
+  },
+  "placebo_example": {
+    "slice": 14,
+    "row_top": 119,
+    "col_left": 107,
+    "h": 4,
+    "w": 8,
+    "ssim_lesion_cg": 0.9565202202647924
+  }
+}

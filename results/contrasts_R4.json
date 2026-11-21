@@ -1,0 +1,1669 @@
+{
+  "n_regions": 217,
+  "n_patients": 18,
+  "pooled": {
+    "cg_ssim_vs_size": {
+      "description": "lesion minus size-matched control",
+      "n_regions": 217,
+      "n_patients": 18,
+      "mean": 0.04353133434186991,
+      "ci_lo": 0.005432109678723418,
+      "ci_hi": 0.08440187651196564,
+      "bootstrap_p": 0.0204,
+      "patient": {
+        "n_patients": 18,
+        "mean": 0.04576491487361038,
+        "median": 0.01788575912449603,
+        "wilcoxon_p": 0.12973785400390625,
+        "n_pos": 12,
+        "n_neg": 6
+      }
+    },
+    "cg_ssim_vs_app": {
+      "description": "lesion minus appearance-matched control",
+      "n_regions": 217,
+      "n_patients": 18,
+      "mean": 0.04967419151561964,
+      "ci_lo": 0.015822577302598007,
+      "ci_hi": 0.08494435619420092,
+      "bootstrap_p": 0.0044,
+      "patient": {
+        "n_patients": 18,
+        "mean": 0.058218856304583455,
+        "median": 0.06144896243794774,
+        "wilcoxon_p": 0.05385589599609375,
+        "n_pos": 11,
+        "n_neg": 7
+      }
+    },
+    "cg_ssim_vs_placebo": {
+      "description": "lesion minus same box on unannotated slices",
+      "n_regions": 215,
+      "n_patients": 18,
+      "mean": -0.07269794763502666,
+      "ci_lo": -0.13819466659274232,
+      "ci_hi": -0.00702300647168805,
+      "bootstrap_p": 0.0256,
+      "patient": {
+        "n_patients": 18,
+        "mean": -0.053673546737364825,
+        "median": -0.040545195244598896,
+        "wilcoxon_p": 0.11870574951171875,
+        "n_pos": 6,
+        "n_neg": 12
+      }
+    },
+    "cg_ssim_diffindiff": {
+      "description": "real delta minus placebo delta",
+      "n_regions": 215,
+      "n_patients": 18,
+      "mean": -0.021886389423872363,
+      "ci_lo": -0.07162612892938337,
+      "ci_hi": 0.03340176601838509,
+      "bootstrap_p": 0.4288,
+      "patient": {
+        "n_patients": 18,
+        "mean": -0.021050199533754373,
+        "median": -0.030314602999425965,
+        "wilcoxon_p": 0.468292236328125,
+        "n_pos": 7,
+        "n_neg": 11
+      }
+    },
+    "cg_psnr_vs_size": {
+      "description": "lesion minus size-matched control",
+      "n_regions": 217,
+      "n_patients": 18,
+      "mean": 0.994457178195092,
+      "ci_lo": 0.1294479676174535,
+      "ci_hi": 1.8278872708764515,
+      "bootstrap_p": 0.0252,
+      "patient": {
+        "n_patients": 18,
+        "mean": 0.9707675423343523,
+        "median": 1.0441152340351278,
+        "wilcoxon_p": 0.19638824462890625,
+        "n_pos": 13,
+        "n_neg": 5
+      }
+    },
+    "cg_psnr_vs_app": {
+      "description": "lesion minus appearance-matched control",
+      "n_regions": 217,
+      "n_patients": 18,
+      "mean": 0.9697842945287762,
+      "ci_lo": 0.18635971354474992,
+      "ci_hi": 1.8414723253077334,
+      "bootstrap_p": 0.0136,
+      "patient": {
+        "n_patients": 18,
+        "mean": 1.1180955792517118,
+        "median": 0.9153234101136427,
+        "wilcoxon_p": 0.11870574951171875,
+        "n_pos": 11,
+        "n_neg": 7
+      }
+    },
+    "cg_psnr_vs_placebo": {
+      "description": "lesion minus same box on unannotated slices",
+      "n_regions": 212,
+      "n_patients": 18,
+      "mean": -1.6653486041175045,
+      "ci_lo": -3.5493564736729315,
+      "ci_hi": 0.16444845166898792,
+      "bootstrap_p": 0.0884,
+      "patient": {
+        "n_patients": 18,
+        "mean": -0.775326688911242,
+        "median": -0.1226875384904098,
+        "wilcoxon_p": 0.44229888916015625,
+        "n_pos": 9,
+        "n_neg": 9
+      }
+    },
+    "cg_psnr_diffindiff": {
+      "description": "real delta minus placebo delta",
+      "n_regions": 212,
+      "n_patients": 18,
+      "mean": -0.5503049836444871,
+      "ci_lo": -1.284410649575393,
+      "ci_hi": 0.3025999846859732,
+      "bootstrap_p": 0.1868,
+      "patient": {
+        "n_patients": 18,
+        "mean": -0.3876816115250389,
+        "median": -0.5498176130792108,
+        "wilcoxon_p": 0.24620819091796875,
+        "n_pos": 7,
+        "n_neg": 11
+      }
+    },
+    "zf_ssim_vs_size": {
+      "description": "lesion minus size-matched control",
+      "n_regions": 217,
+      "n_patients": 18,
+      "mean": 0.036172221615696894,
+      "ci_lo": 0.00957435386125334,
+      "ci_hi": 0.06466418283251078,
+      "bootstrap_p": 0.0044,
+      "patient": {
+        "n_patients": 18,
+        "mean": 0.029154346266226285,
+        "median": 0.03176046425630303,
+        "wilcoxon_p": 0.0431671142578125,
+        "n_pos": 12,
+        "n_neg": 6
+      }
+    },
+    "zf_ssim_vs_app": {
+      "description": "lesion minus appearance-matched control",
+      "n_regions": 217,
+      "n_patients": 18,
+      "mean": 0.028173469880418352,
+      "ci_lo": 0.002414616724929121,
+      "ci_hi": 0.05747122182255171,
+      "bootstrap_p": 0.0328,
+      "patient": {
+        "n_patients": 18,
+        "mean": 0.021581774864805343,
+        "median": 0.02254946008870033,
+        "wilcoxon_p": 0.12973785400390625,
+        "n_pos": 12,
+        "n_neg": 6
+      }
+    },
+    "zf_ssim_vs_placebo": {
+      "description": "lesion minus same box on unannotated slices",
+      "n_regions": 215,
+      "n_patients": 18,
+      "mean": 0.026145843542722213,
+      "ci_lo": -0.002640913893693682,
+      "ci_hi": 0.05738955016993756,
+      "bootstrap_p": 0.0736,
+      "patient": {
+        "n_patients": 18,
+        "mean": 0.03365928086705563,
+        "median": 0.04043208186762154,
+        "wilcoxon_p": 0.02684783935546875,
+        "n_pos": 12,
+        "n_neg": 6
+      }
+    },
+    "zf_ssim_diffindiff": {
+      "description": "real delta minus placebo delta",
+      "n_regions": 215,
+      "n_patients": 18,
+      "mean": 0.02622454531193521,
+      "ci_lo": -0.011281636711859718,
+      "ci_hi": 0.060084883048484854,
+      "bootstrap_p": 0.1672,
+      "patient": {
+        "n_patients": 18,
+        "mean": 0.025568603780488378,
+        "median": 0.04110474672052762,
+        "wilcoxon_p": 0.0599365234375,
+        "n_pos": 13,
+        "n_neg": 5
+      }
+    },
+    "zf_psnr_vs_size": {
+      "description": "lesion minus size-matched control",
+      "n_regions": 217,
+      "n_patients": 18,
+      "mean": 0.553269673984112,
+      "ci_lo": -0.37521563949687137,
+      "ci_hi": 1.3981644261278836,
+      "bootstrap_p": 0.248,
+      "patient": {
+        "n_patients": 18,
+        "mean": 0.40997321711763085,
+        "median": 0.6437419615363674,
+        "wilcoxon_p": 0.44229888916015625,
+        "n_pos": 11,
+        "n_neg": 7
+      }
+    },
+    "zf_psnr_vs_app": {
+      "description": "lesion minus appearance-matched control",
+      "n_regions": 217,
+      "n_patients": 18,
+      "mean": 0.2978276990291952,
+      "ci_lo": -0.4481971990100861,
+      "ci_hi": 1.0974412479832,
+      "bootstrap_p": 0.4512,
+      "patient": {
+        "n_patients": 18,
+        "mean": 0.20779436523868394,
+        "median": 0.2852817297945036,
+        "wilcoxon_p": 0.550872802734375,
+        "n_pos": 9,
+        "n_neg": 9
+      }
+    },
+    "zf_psnr_vs_placebo": {
+      "description": "lesion minus same box on unannotated slices",
+      "n_regions": 212,
+      "n_patients": 18,
+      "mean": 0.8235802605322564,
+      "ci_lo": -0.39705414315720067,
+      "ci_hi": 2.3098529691161795,
+      "bootstrap_p": 0.1976,
+      "patient": {
+        "n_patients": 18,
+        "mean": 1.2419422036949443,
+        "median": 1.377373162629771,
+        "wilcoxon_p": 0.0987396240234375,
+        "n_pos": 11,
+        "n_neg": 7
+      }
+    },
+    "zf_psnr_diffindiff": {
+      "description": "real delta minus placebo delta",
+      "n_regions": 212,
+      "n_patients": 18,
+      "mean": 0.27903744856562385,
+      "ci_lo": -1.3732340066634592,
+      "ci_hi": 1.5489521545971237,
+      "bootstrap_p": 0.6764,
+      "patient": {
+        "n_patients": 18,
+        "mean": 0.46658695219543056,
+        "median": 1.5472440178254825,
+        "wilcoxon_p": 0.24620819091796875,
+        "n_pos": 12,
+        "n_neg": 6
+      }
+    }
+  },
+  "per_label": {
+    "Cartilage - Partial Thickness loss/defect": {
+      "n_regions": 49,
+      "n_patients": 9,
+      "highlighted": true,
+      "cg_ssim_vs_size": {
+        "n_regions": 49,
+        "n_patients": 9,
+        "mean": -0.01331373115538867,
+        "ci_lo": -0.06360691935175991,
+        "ci_hi": 0.026452223286853246,
+        "bootstrap_p": 0.5256,
+        "patient": {
+          "n_patients": 9,
+          "mean": -0.016183941016397158,
+          "median": -0.006610831662962104,
+          "wilcoxon_p": 0.8203125,
+          "n_pos": 4,
+          "n_neg": 5
+        }
+      },
+      "cg_ssim_vs_app": {
+        "n_regions": 49,
+        "n_patients": 9,
+        "mean": 0.02581683210435895,
+        "ci_lo": -0.031725841887565526,
+        "ci_hi": 0.0780528302172743,
+        "bootstrap_p": 0.4508,
+        "patient": {
+          "n_patients": 9,
+          "mean": 0.005184712747660321,
+          "median": -0.012534395953987051,
+          "wilcoxon_p": 1.0,
+          "n_pos": 4,
+          "n_neg": 5
+        }
+      },
+      "cg_ssim_vs_placebo": {
+        "n_regions": 49,
+        "n_patients": 9,
+        "mean": -0.18513987307729124,
+        "ci_lo": -0.24066620302911423,
+        "ci_hi": -0.12832612527546808,
+        "bootstrap_p": 0.0,
+        "patient": {
+          "n_patients": 9,
+          "mean": -0.17910631606329852,
+          "median": -0.17714910542644804,
+          "wilcoxon_p": 0.0078125,
+          "n_pos": 1,
+          "n_neg": 8
+        }
+      },
+      "cg_ssim_diffindiff": {
+        "n_regions": 49,
+        "n_patients": 9,
+        "mean": -0.11765512481651182,
+        "ci_lo": -0.169376970902332,
+        "ci_hi": -0.08102521625254468,
+        "bootstrap_p": 0.0,
+        "patient": {
+          "n_patients": 9,
+          "mean": -0.1315176084531599,
+          "median": -0.11414068979603276,
+          "wilcoxon_p": 0.0078125,
+          "n_pos": 1,
+          "n_neg": 8
+        }
+      },
+      "cg_psnr_vs_size": {
+        "n_regions": 49,
+        "n_patients": 9,
+        "mean": -0.9058472094978687,
+        "ci_lo": -1.7228559303548656,
+        "ci_hi": -0.14225040080852236,
+        "bootstrap_p": 0.0176,
+        "patient": {
+          "n_patients": 9,
+          "mean": -1.0617372422834386,
+          "median": -1.4634979204426137,
+          "wilcoxon_p": 0.12890625,
+          "n_pos": 2,
+          "n_neg": 7
+        }
+      },
+      "cg_psnr_vs_app": {
+        "n_regions": 49,
+        "n_patients": 9,
+        "mean": -0.1920903114873356,
+        "ci_lo": -1.2882435430405828,
+        "ci_hi": 0.9514137490773829,
+        "bootstrap_p": 0.6796,
+        "patient": {
+          "n_patients": 9,
+          "mean": -0.5227348803759467,
+          "median": -1.1861020469786243,
+          "wilcoxon_p": 0.49609375,
+          "n_pos": 3,
+          "n_neg": 6
+        }
+      },
+      "cg_psnr_vs_placebo": {
+        "n_regions": 49,
+        "n_patients": 9,
+        "mean": -4.7770419609745645,
+        "ci_lo": -6.483820694926299,
+        "ci_hi": -2.781515221904398,
+        "bootstrap_p": 0.0,
+        "patient": {
+          "n_patients": 9,
+          "mean": -4.080110969631772,
+          "median": -5.161210964515033,
+          "wilcoxon_p": 0.0078125,
+          "n_pos": 1,
+          "n_neg": 8
+        }
+      },
+      "cg_psnr_diffindiff": {
+        "n_regions": 49,
+        "n_patients": 9,
+        "mean": -3.128430556468121,
+        "ci_lo": -4.31919898936381,
+        "ci_hi": -2.191602104805541,
+        "bootstrap_p": 0.0,
+        "patient": {
+          "n_patients": 9,
+          "mean": -3.5616799878189287,
+          "median": -3.951414790096697,
+          "wilcoxon_p": 0.00390625,
+          "n_pos": 0,
+          "n_neg": 9
+        }
+      },
+      "zf_ssim_vs_size": {
+        "n_regions": 49,
+        "n_patients": 9,
+        "mean": 0.1054534456652357,
+        "ci_lo": 0.0897302671472167,
+        "ci_hi": 0.12944954356132027,
+        "bootstrap_p": 0.0,
+        "patient": {
+          "n_patients": 9,
+          "mean": 0.10170382420820162,
+          "median": 0.09993098395533968,
+          "wilcoxon_p": 0.00390625,
+          "n_pos": 9,
+          "n_neg": 0
+        }
+      },
+      "zf_ssim_vs_app": {
+        "n_regions": 49,
+        "n_patients": 9,
+        "mean": 0.10006353497872288,
+        "ci_lo": 0.07674285859390596,
+        "ci_hi": 0.14107110159724845,
+        "bootstrap_p": 0.0,
+        "patient": {
+          "n_patients": 9,
+          "mean": 0.10976067775716006,
+          "median": 0.08980838988259526,
+          "wilcoxon_p": 0.00390625,
+          "n_pos": 9,
+          "n_neg": 0
+        }
+      },
+      "zf_ssim_vs_placebo": {
+        "n_regions": 49,
+        "n_patients": 9,
+        "mean": 0.024882389926670592,
+        "ci_lo": -0.00018709250932694903,
+        "ci_hi": 0.06238296373601354,
+        "bootstrap_p": 0.0532,
+        "patient": {
+          "n_patients": 9,
+          "mean": 0.03507123716410652,
+          "median": 0.022162473497668977,
+          "wilcoxon_p": 0.0546875,
+          "n_pos": 6,
+          "n_neg": 3
+        }
+      },
+      "zf_ssim_diffindiff": {
+        "n_regions": 49,
+        "n_patients": 9,
+        "mean": 0.04084746551394836,
+        "ci_lo": 0.014247873321268943,
+        "ci_hi": 0.06765477025537024,
+        "bootstrap_p": 0.0052,
+        "patient": {
+          "n_patients": 9,
+          "mean": 0.027862851264542226,
+          "median": 0.043820460745759314,
+          "wilcoxon_p": 0.25,
+          "n_pos": 6,
+          "n_neg": 3
+        }
+      },
+      "zf_psnr_vs_size": {
+        "n_regions": 49,
+        "n_patients": 9,
+        "mean": 2.678434370003126,
+        "ci_lo": 1.7714313638261023,
+        "ci_hi": 3.918007924147906,
+        "bootstrap_p": 0.0,
+        "patient": {
+          "n_patients": 9,
+          "mean": 2.738129037695801,
+          "median": 2.607809685880638,
+          "wilcoxon_p": 0.01171875,
+          "n_pos": 8,
+          "n_neg": 1
+        }
+      },
+      "zf_psnr_vs_app": {
+        "n_regions": 49,
+        "n_patients": 9,
+        "mean": 2.016811894590535,
+        "ci_lo": 1.0262423856174356,
+        "ci_hi": 3.365456321220871,
+        "bootstrap_p": 0.0,
+        "patient": {
+          "n_patients": 9,
+          "mean": 2.6879372155107197,
+          "median": 2.5152172264727444,
+          "wilcoxon_p": 0.00390625,
+          "n_pos": 9,
+          "n_neg": 0
+        }
+      },
+      "zf_psnr_vs_placebo": {
+        "n_regions": 49,
+        "n_patients": 9,
+        "mean": 0.5586110427908211,
+        "ci_lo": -0.9776503088523218,
+        "ci_hi": 2.7630317868088383,
+        "bootstrap_p": 0.4768,
+        "patient": {
+          "n_patients": 9,
+          "mean": 1.4860323643007352,
+          "median": 0.776362352351654,
+          "wilcoxon_p": 0.25,
+          "n_pos": 6,
+          "n_neg": 3
+        }
+      },
+      "zf_psnr_diffindiff": {
+        "n_regions": 49,
+        "n_patients": 9,
+        "mean": 0.7048802447930864,
+        "ci_lo": -0.1926363673016249,
+        "ci_hi": 1.6833466830709094,
+        "bootstrap_p": 0.1068,
+        "patient": {
+          "n_patients": 9,
+          "mean": 0.48096097115741426,
+          "median": 0.37693975771837157,
+          "wilcoxon_p": 0.65234375,
+          "n_pos": 6,
+          "n_neg": 3
+        }
+      }
+    },
+    "Displaced Meniscal Tissue": {
+      "n_regions": 2,
+      "n_patients": 1,
+      "highlighted": false,
+      "cg_ssim_vs_size": {
+        "n_regions": 2,
+        "n_patients": 1,
+        "mean": -0.02961230309999946,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_ssim_vs_app": {
+        "n_regions": 2,
+        "n_patients": 1,
+        "mean": -0.16434846906660688,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_ssim_vs_placebo": {
+        "n_regions": 2,
+        "n_patients": 1,
+        "mean": -0.11078148547500843,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_ssim_diffindiff": {
+        "n_regions": 2,
+        "n_patients": 1,
+        "mean": -0.054895718862365675,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_psnr_vs_size": {
+        "n_regions": 2,
+        "n_patients": 1,
+        "mean": -1.9945960480871516,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_psnr_vs_app": {
+        "n_regions": 2,
+        "n_patients": 1,
+        "mean": -3.6860672961193295,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_psnr_vs_placebo": {
+        "n_regions": 2,
+        "n_patients": 1,
+        "mean": -0.6948946984164692,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_psnr_diffindiff": {
+        "n_regions": 2,
+        "n_patients": 1,
+        "mean": -1.0373490603347069,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_ssim_vs_size": {
+        "n_regions": 2,
+        "n_patients": 1,
+        "mean": 0.04406563790050072,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_ssim_vs_app": {
+        "n_regions": 2,
+        "n_patients": 1,
+        "mean": 0.07206043207542201,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_ssim_vs_placebo": {
+        "n_regions": 2,
+        "n_patients": 1,
+        "mean": 0.02552295937800897,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_ssim_diffindiff": {
+        "n_regions": 2,
+        "n_patients": 1,
+        "mean": -0.022239136231746084,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_psnr_vs_size": {
+        "n_regions": 2,
+        "n_patients": 1,
+        "mean": 2.843779598904188,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_psnr_vs_app": {
+        "n_regions": 2,
+        "n_patients": 1,
+        "mean": 4.780492942770991,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_psnr_vs_placebo": {
+        "n_regions": 2,
+        "n_patients": 1,
+        "mean": 1.9203186298178956,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_psnr_diffindiff": {
+        "n_regions": 2,
+        "n_patients": 1,
+        "mean": 0.19452148916368217,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      }
+    },
+    "Joint Effusion": {
+      "n_regions": 20,
+      "n_patients": 2,
+      "highlighted": false,
+      "cg_ssim_vs_size": {
+        "n_regions": 20,
+        "n_patients": 2,
+        "mean": 0.012821210022571878,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_ssim_vs_app": {
+        "n_regions": 20,
+        "n_patients": 2,
+        "mean": 0.005364746572460638,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_ssim_vs_placebo": {
+        "n_regions": 18,
+        "n_patients": 2,
+        "mean": 0.006184853267226256,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_ssim_diffindiff": {
+        "n_regions": 18,
+        "n_patients": 2,
+        "mean": 0.07924312400516363,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_psnr_vs_size": {
+        "n_regions": 20,
+        "n_patients": 2,
+        "mean": 1.2101764010313274,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_psnr_vs_app": {
+        "n_regions": 20,
+        "n_patients": 2,
+        "mean": 1.1506854547108394,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_psnr_vs_placebo": {
+        "n_regions": 18,
+        "n_patients": 2,
+        "mean": -0.3939469690955474,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_psnr_diffindiff": {
+        "n_regions": 18,
+        "n_patients": 2,
+        "mean": 2.270472219793562,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_ssim_vs_size": {
+        "n_regions": 20,
+        "n_patients": 2,
+        "mean": -0.04060371286506539,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_ssim_vs_app": {
+        "n_regions": 20,
+        "n_patients": 2,
+        "mean": -0.028489685841366907,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_ssim_vs_placebo": {
+        "n_regions": 18,
+        "n_patients": 2,
+        "mean": -0.04486182509331442,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_ssim_diffindiff": {
+        "n_regions": 18,
+        "n_patients": 2,
+        "mean": -0.08621659392402804,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_psnr_vs_size": {
+        "n_regions": 20,
+        "n_patients": 2,
+        "mean": -3.149288514145,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_psnr_vs_app": {
+        "n_regions": 20,
+        "n_patients": 2,
+        "mean": -2.519983824369895,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_psnr_vs_placebo": {
+        "n_regions": 18,
+        "n_patients": 2,
+        "mean": -2.950667189969591,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_psnr_diffindiff": {
+        "n_regions": 18,
+        "n_patients": 2,
+        "mean": -6.16449906366965,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      }
+    },
+    "LCL Complex - Low-Mod Grade Sprain": {
+      "n_regions": 4,
+      "n_patients": 2,
+      "highlighted": false,
+      "cg_ssim_vs_size": {
+        "n_regions": 4,
+        "n_patients": 2,
+        "mean": -0.0940561449795158,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_ssim_vs_app": {
+        "n_regions": 4,
+        "n_patients": 2,
+        "mean": 0.0010118924869517015,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_ssim_vs_placebo": {
+        "n_regions": 4,
+        "n_patients": 2,
+        "mean": -0.20458391195803327,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_ssim_diffindiff": {
+        "n_regions": 4,
+        "n_patients": 2,
+        "mean": -0.28411542606256923,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_psnr_vs_size": {
+        "n_regions": 4,
+        "n_patients": 2,
+        "mean": -1.327858524597132,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_psnr_vs_app": {
+        "n_regions": 4,
+        "n_patients": 2,
+        "mean": 0.24387244727479906,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_psnr_vs_placebo": {
+        "n_regions": 4,
+        "n_patients": 2,
+        "mean": -1.5749252019328113,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_psnr_diffindiff": {
+        "n_regions": 4,
+        "n_patients": 2,
+        "mean": -3.257574993816891,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_ssim_vs_size": {
+        "n_regions": 4,
+        "n_patients": 2,
+        "mean": -0.021662095818197585,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_ssim_vs_app": {
+        "n_regions": 4,
+        "n_patients": 2,
+        "mean": -0.0012891405824726476,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_ssim_vs_placebo": {
+        "n_regions": 4,
+        "n_patients": 2,
+        "mean": 0.09640869673800967,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_ssim_diffindiff": {
+        "n_regions": 4,
+        "n_patients": 2,
+        "mean": 0.08913773343332232,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_psnr_vs_size": {
+        "n_regions": 4,
+        "n_patients": 2,
+        "mean": 0.015500657574458288,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_psnr_vs_app": {
+        "n_regions": 4,
+        "n_patients": 2,
+        "mean": -1.4128915190810805,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_psnr_vs_placebo": {
+        "n_regions": 4,
+        "n_patients": 2,
+        "mean": 4.770514815782645,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_psnr_diffindiff": {
+        "n_regions": 4,
+        "n_patients": 2,
+        "mean": 5.31416865279672,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      }
+    },
+    "Ligament - ACL High Grade Sprain": {
+      "n_regions": 21,
+      "n_patients": 2,
+      "highlighted": false,
+      "cg_ssim_vs_size": {
+        "n_regions": 21,
+        "n_patients": 2,
+        "mean": -0.023639821565917023,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_ssim_vs_app": {
+        "n_regions": 21,
+        "n_patients": 2,
+        "mean": -0.03591659486059531,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_ssim_vs_placebo": {
+        "n_regions": 21,
+        "n_patients": 2,
+        "mean": 0.015498073176491819,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_ssim_diffindiff": {
+        "n_regions": 21,
+        "n_patients": 2,
+        "mean": -0.00590802543631583,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_psnr_vs_size": {
+        "n_regions": 21,
+        "n_patients": 2,
+        "mean": -0.20874951797917857,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_psnr_vs_app": {
+        "n_regions": 21,
+        "n_patients": 2,
+        "mean": -1.0623848772406705,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_psnr_vs_placebo": {
+        "n_regions": 21,
+        "n_patients": 2,
+        "mean": 1.5054054861819812,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_psnr_diffindiff": {
+        "n_regions": 21,
+        "n_patients": 2,
+        "mean": -0.03493713377995935,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_ssim_vs_size": {
+        "n_regions": 21,
+        "n_patients": 2,
+        "mean": -0.0026387281513793113,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_ssim_vs_app": {
+        "n_regions": 21,
+        "n_patients": 2,
+        "mean": -0.029480650237456173,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_ssim_vs_placebo": {
+        "n_regions": 21,
+        "n_patients": 2,
+        "mean": -0.004066018471695198,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_ssim_diffindiff": {
+        "n_regions": 21,
+        "n_patients": 2,
+        "mean": -0.03675792442138656,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_psnr_vs_size": {
+        "n_regions": 21,
+        "n_patients": 2,
+        "mean": 0.29312463054771837,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_psnr_vs_app": {
+        "n_regions": 21,
+        "n_patients": 2,
+        "mean": 0.03202537638972947,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_psnr_vs_placebo": {
+        "n_regions": 21,
+        "n_patients": 2,
+        "mean": 0.6697072221743466,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_psnr_diffindiff": {
+        "n_regions": 21,
+        "n_patients": 2,
+        "mean": -2.036472500495281,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      }
+    },
+    "Ligament - ACL Low Grade sprain": {
+      "n_regions": 7,
+      "n_patients": 1,
+      "highlighted": false,
+      "cg_ssim_vs_size": {
+        "n_regions": 7,
+        "n_patients": 1,
+        "mean": -0.20052275485297752,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_ssim_vs_app": {
+        "n_regions": 7,
+        "n_patients": 1,
+        "mean": -0.10363231641945513,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_ssim_vs_placebo": {
+        "n_regions": 7,
+        "n_patients": 1,
+        "mean": -0.32496274800466446,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_ssim_diffindiff": {
+        "n_regions": 7,
+        "n_patients": 1,
+        "mean": -0.22857890464411518,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_psnr_vs_size": {
+        "n_regions": 7,
+        "n_patients": 1,
+        "mean": -1.6615606057830503,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_psnr_vs_app": {
+        "n_regions": 7,
+        "n_patients": 1,
+        "mean": -0.9158567347421703,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_psnr_vs_placebo": {
+        "n_regions": 7,
+        "n_patients": 1,
+        "mean": -6.247314503011036,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_psnr_diffindiff": {
+        "n_regions": 7,
+        "n_patients": 1,
+        "mean": -2.294319566393671,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_ssim_vs_size": {
+        "n_regions": 7,
+        "n_patients": 1,
+        "mean": -0.013606828945630716,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_ssim_vs_app": {
+        "n_regions": 7,
+        "n_patients": 1,
+        "mean": -0.05068341557429944,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_ssim_vs_placebo": {
+        "n_regions": 7,
+        "n_patients": 1,
+        "mean": -0.09183274862775088,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_ssim_diffindiff": {
+        "n_regions": 7,
+        "n_patients": 1,
+        "mean": -0.034368810503939015,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_psnr_vs_size": {
+        "n_regions": 7,
+        "n_patients": 1,
+        "mean": 1.4719687063259137,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_psnr_vs_app": {
+        "n_regions": 7,
+        "n_patients": 1,
+        "mean": -0.7856422615151892,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_psnr_vs_placebo": {
+        "n_regions": 7,
+        "n_patients": 1,
+        "mean": -3.00795959846304,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_psnr_diffindiff": {
+        "n_regions": 7,
+        "n_patients": 1,
+        "mean": -0.2196945639003551,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      }
+    },
+    "Ligament - MCL Low-Mod Grade Sprain": {
+      "n_regions": 11,
+      "n_patients": 5,
+      "highlighted": false,
+      "cg_ssim_vs_size": {
+        "n_regions": 11,
+        "n_patients": 5,
+        "mean": 0.18579955095950076,
+        "ci_lo": 0.07426562653564613,
+        "ci_hi": 0.23785600826576145,
+        "bootstrap_p": 0.0,
+        "patient": {
+          "n_patients": 5,
+          "mean": 0.16311696763560057,
+          "median": 0.17447711367266527,
+          "wilcoxon_p": 0.0625,
+          "n_pos": 5,
+          "n_neg": 0
+        }
+      },
+      "cg_ssim_vs_app": {
+        "n_regions": 11,
+        "n_patients": 5,
+        "mean": 0.15104684452107553,
+        "ci_lo": 0.05692558891683349,
+        "ci_hi": 0.19497009713638846,
+        "bootstrap_p": 0.0,
+        "patient": {
+          "n_patients": 5,
+          "mean": 0.13156062385397344,
+          "median": 0.1371826765530887,
+          "wilcoxon_p": 0.0625,
+          "n_pos": 5,
+          "n_neg": 0
+        }
+      },
+      "cg_ssim_vs_placebo": {
+        "n_regions": 11,
+        "n_patients": 5,
+        "mean": 0.02178167515386312,
+        "ci_lo": -0.0435447539133464,
+        "ci_hi": 0.0755759046528933,
+        "bootstrap_p": 0.4944,
+        "patient": {
+          "n_patients": 5,
+          "mean": 0.020085283720975924,
+          "median": 0.022510416339995953,
+          "wilcoxon_p": 0.625,
+          "n_pos": 3,
+          "n_neg": 2
+        }
+      },
+      "cg_ssim_diffindiff": {
+        "n_regions": 11,
+        "n_patients": 5,
+        "mean": 0.09115505239510294,
+        "ci_lo": -0.017415296273148584,
+        "ci_hi": 0.15337306189291022,
+        "bootstrap_p": 0.0888,
+        "patient": {
+          "n_patients": 5,
+          "mean": 0.06753901025596516,
+          "median": 0.07091502041032996,
+          "wilcoxon_p": 0.1875,
+          "n_pos": 4,
+          "n_neg": 1
+        }
+      },
+      "cg_psnr_vs_size": {
+        "n_regions": 11,
+        "n_patients": 5,
+        "mean": 2.55402574024276,
+        "ci_lo": -0.6098135532285077,
+        "ci_hi": 4.236683423507255,
+        "bootstrap_p": 0.122,
+        "patient": {
+          "n_patients": 5,
+          "mean": 2.3577728328453507,
+          "median": 3.911481074057003,
+          "wilcoxon_p": 0.1875,
+          "n_pos": 4,
+          "n_neg": 1
+        }
+      },
+      "cg_psnr_vs_app": {
+        "n_regions": 11,
+        "n_patients": 5,
+        "mean": 2.500407750553176,
+        "ci_lo": -0.3415880506836089,
+        "ci_hi": 4.213545317570354,
+        "bootstrap_p": 0.09,
+        "patient": {
+          "n_patients": 5,
+          "mean": 2.2372505783694527,
+          "median": 2.539504636705009,
+          "wilcoxon_p": 0.125,
+          "n_pos": 4,
+          "n_neg": 1
+        }
+      },
+      "cg_psnr_vs_placebo": {
+        "n_regions": 10,
+        "n_patients": 5,
+        "mean": -0.33587909656451165,
+        "ci_lo": -1.8978487098596237,
+        "ci_hi": 1.3024483432815768,
+        "bootstrap_p": 0.712,
+        "patient": {
+          "n_patients": 5,
+          "mean": 0.09240702629757536,
+          "median": -0.3015521206608156,
+          "wilcoxon_p": 0.8125,
+          "n_pos": 2,
+          "n_neg": 3
+        }
+      },
+      "cg_psnr_diffindiff": {
+        "n_regions": 10,
+        "n_patients": 5,
+        "mean": 0.4100105502627766,
+        "ci_lo": -1.8564871359844954,
+        "ci_hi": 1.802716697018069,
+        "bootstrap_p": 0.6808,
+        "patient": {
+          "n_patients": 5,
+          "mean": 0.25299029125794015,
+          "median": 0.832124399206239,
+          "wilcoxon_p": 1.0,
+          "n_pos": 3,
+          "n_neg": 2
+        }
+      },
+      "zf_ssim_vs_size": {
+        "n_regions": 11,
+        "n_patients": 5,
+        "mean": -0.0774569061177899,
+        "ci_lo": -0.1422495754411362,
+        "ci_hi": -0.030215680645661103,
+        "bootstrap_p": 0.0,
+        "patient": {
+          "n_patients": 5,
+          "mean": -0.09694949450521326,
+          "median": -0.10903970057314094,
+          "wilcoxon_p": 0.0625,
+          "n_pos": 0,
+          "n_neg": 5
+        }
+      },
+      "zf_ssim_vs_app": {
+        "n_regions": 11,
+        "n_patients": 5,
+        "mean": -0.05173739603539996,
+        "ci_lo": -0.10234808288091829,
+        "ci_hi": -0.0009427773455088644,
+        "bootstrap_p": 0.0484,
+        "patient": {
+          "n_patients": 5,
+          "mean": -0.06881165805688003,
+          "median": -0.08186535945324702,
+          "wilcoxon_p": 0.125,
+          "n_pos": 1,
+          "n_neg": 4
+        }
+      },
+      "zf_ssim_vs_placebo": {
+        "n_regions": 11,
+        "n_patients": 5,
+        "mean": -0.02862370310635172,
+        "ci_lo": -0.06216395383130876,
+        "ci_hi": 0.004535389288620225,
+        "bootstrap_p": 0.1456,
+        "patient": {
+          "n_patients": 5,
+          "mean": -0.02182784810744538,
+          "median": -0.04035924998946672,
+          "wilcoxon_p": 0.4375,
+          "n_pos": 1,
+          "n_neg": 4
+        }
+      },
+      "zf_ssim_diffindiff": {
+        "n_regions": 11,
+        "n_patients": 5,
+        "mean": -0.034918591511939594,
+        "ci_lo": -0.08352599942259697,
+        "ci_hi": 0.013446154464346848,
+        "bootstrap_p": 0.1572,
+        "patient": {
+          "n_patients": 5,
+          "mean": -0.04441652690688707,
+          "median": -0.07478020349805005,
+          "wilcoxon_p": 0.1875,
+          "n_pos": 1,
+          "n_neg": 4
+        }
+      },
+      "zf_psnr_vs_size": {
+        "n_regions": 11,
+        "n_patients": 5,
+        "mean": -5.281745018104936,
+        "ci_lo": -6.568373196149804,
+        "ci_hi": -4.085503600430346,
+        "bootstrap_p": 0.0,
+        "patient": {
+          "n_patients": 5,
+          "mean": -5.821802316769374,
+          "median": -6.274309267311708,
+          "wilcoxon_p": 0.0625,
+          "n_pos": 0,
+          "n_neg": 5
+        }
+      },
+      "zf_psnr_vs_app": {
+        "n_regions": 11,
+        "n_patients": 5,
+        "mean": -2.631692831421017,
+        "ci_lo": -3.1704689998365936,
+        "ci_hi": -2.4145572515253173,
+        "bootstrap_p": 0.0,
+        "patient": {
+          "n_patients": 5,
+          "mean": -2.8659736301834,
+          "median": -2.650469844049738,
+          "wilcoxon_p": 0.0625,
+          "n_pos": 0,
+          "n_neg": 5
+        }
+      },
+      "zf_psnr_vs_placebo": {
+        "n_regions": 10,
+        "n_patients": 5,
+        "mean": -2.3056983837033673,
+        "ci_lo": -4.682278672404472,
+        "ci_hi": 0.4983496349679497,
+        "bootstrap_p": 0.1056,
+        "patient": {
+          "n_patients": 5,
+          "mean": -1.9925660985440956,
+          "median": -2.99030731034566,
+          "wilcoxon_p": 0.4375,
+          "n_pos": 1,
+          "n_neg": 4
+        }
+      },
+      "zf_psnr_diffindiff": {
+        "n_regions": 10,
+        "n_patients": 5,
+        "mean": -3.3490723172558057,
+        "ci_lo": -6.602883565821066,
+        "ci_hi": -1.1798648182122982,
+        "bootstrap_p": 0.0,
+        "patient": {
+          "n_patients": 5,
+          "mean": -3.782467107407097,
+          "median": -3.8484561113712736,
+          "wilcoxon_p": 0.125,
+          "n_pos": 1,
+          "n_neg": 4
+        }
+      }
+    },
+    "Meniscus Tear": {
+      "n_regions": 97,
+      "n_patients": 15,
+      "highlighted": true,
+      "cg_ssim_vs_size": {
+        "n_regions": 97,
+        "n_patients": 15,
+        "mean": 0.09828703406927995,
+        "ci_lo": 0.016714699385661006,
+        "ci_hi": 0.15333232937425684,
+        "bootstrap_p": 0.0252,
+        "patient": {
+          "n_patients": 15,
+          "mean": 0.04622872669458996,
+          "median": 0.12548539161130617,
+          "wilcoxon_p": 0.207763671875,
+          "n_pos": 9,
+          "n_neg": 6
+        }
+      },
+      "cg_ssim_vs_app": {
+        "n_regions": 97,
+        "n_patients": 15,
+        "mean": 0.09708355255200127,
+        "ci_lo": 0.033229282662981086,
+        "ci_hi": 0.14120562937473605,
+        "bootstrap_p": 0.0092,
+        "patient": {
+          "n_patients": 15,
+          "mean": 0.04784146132466546,
+          "median": 0.12327469609804939,
+          "wilcoxon_p": 0.12054443359375,
+          "n_pos": 9,
+          "n_neg": 6
+        }
+      },
+      "cg_ssim_vs_placebo": {
+        "n_regions": 97,
+        "n_patients": 15,
+        "mean": -0.03773245170182853,
+        "ci_lo": -0.1210054673217184,
+        "ci_hi": 0.04152998476872004,
+        "bootstrap_p": 0.3836,
+        "patient": {
+          "n_patients": 15,
+          "mean": -0.0683716099852251,
+          "median": -0.04604310784216007,
+          "wilcoxon_p": 0.1353759765625,
+          "n_pos": 6,
+          "n_neg": 9
+        }
+      },
+      "cg_ssim_diffindiff": {
+        "n_regions": 97,
+        "n_patients": 15,
+        "mean": 0.01516665247734732,
+        "ci_lo": -0.06042952216040651,
+        "ci_hi": 0.09178613853933487,
+        "bootstrap_p": 0.7156,
+        "patient": {
+          "n_patients": 15,
+          "mean": -0.026101177425629674,
+          "median": -0.05604358765789551,
+          "wilcoxon_p": 0.5614013671875,
+          "n_pos": 7,
+          "n_neg": 8
+        }
+      },
+      "cg_psnr_vs_size": {
+        "n_regions": 97,
+        "n_patients": 15,
+        "mean": 2.16259920113227,
+        "ci_lo": 0.12728711144995475,
+        "ci_hi": 3.586912132916841,
+        "bootstrap_p": 0.0404,
+        "patient": {
+          "n_patients": 15,
+          "mean": 1.1503176771488008,
+          "median": 1.5821883167603001,
+          "wilcoxon_p": 0.22930908203125,
+          "n_pos": 9,
+          "n_neg": 6
+        }
+      },
+      "cg_psnr_vs_app": {
+        "n_regions": 97,
+        "n_patients": 15,
+        "mean": 2.0622675657221787,
+        "ci_lo": 0.29702366815546516,
+        "ci_hi": 3.5067876490376215,
+        "bootstrap_p": 0.0256,
+        "patient": {
+          "n_patients": 15,
+          "mean": 1.1166222413188938,
+          "median": 2.1687136294797824,
+          "wilcoxon_p": 0.1353759765625,
+          "n_pos": 9,
+          "n_neg": 6
+        }
+      },
+      "cg_psnr_vs_placebo": {
+        "n_regions": 95,
+        "n_patients": 15,
+        "mean": -1.0585033470045562,
+        "ci_lo": -3.325754725952163,
+        "ci_hi": 1.1855784826492433,
+        "bootstrap_p": 0.4264,
+        "patient": {
+          "n_patients": 15,
+          "mean": -0.8672427776857273,
+          "median": 0.16155594154739225,
+          "wilcoxon_p": 0.45428466796875,
+          "n_pos": 8,
+          "n_neg": 7
+        }
+      },
+      "cg_psnr_diffindiff": {
+        "n_regions": 95,
+        "n_patients": 15,
+        "mean": 0.0988061503782246,
+        "ci_lo": -1.0852035017588542,
+        "ci_hi": 1.3187532923473053,
+        "bootstrap_p": 0.8628,
+        "patient": {
+          "n_patients": 15,
+          "mean": -0.215033728110484,
+          "median": -0.5131821981901984,
+          "wilcoxon_p": 0.7197265625,
+          "n_pos": 6,
+          "n_neg": 9
+        }
+      },
+      "zf_ssim_vs_size": {
+        "n_regions": 97,
+        "n_patients": 15,
+        "mean": 0.04364218086702424,
+        "ci_lo": 0.014360461313314156,
+        "ci_hi": 0.07435368304560394,
+        "bootstrap_p": 0.0016,
+        "patient": {
+          "n_patients": 15,
+          "mean": 0.04465507797089082,
+          "median": 0.04056766100280096,
+          "wilcoxon_p": 0.00335693359375,
+          "n_pos": 13,
+          "n_neg": 2
+        }
+      },
+      "zf_ssim_vs_app": {
+        "n_regions": 97,
+        "n_patients": 15,
+        "mean": 0.032472640590448354,
+        "ci_lo": 0.00512283222533254,
+        "ci_hi": 0.059063549264406955,
+        "bootstrap_p": 0.0168,
+        "patient": {
+          "n_patients": 15,
+          "mean": 0.027654413929497634,
+          "median": 0.02537263001190483,
+          "wilcoxon_p": 0.083251953125,
+          "n_pos": 9,
+          "n_neg": 6
+        }
+      },
+      "zf_ssim_vs_placebo": {
+        "n_regions": 97,
+        "n_patients": 15,
+        "mean": 0.05685154730295068,
+        "ci_lo": 0.02973353517236188,
+        "ci_hi": 0.08212904123112637,
+        "bootstrap_p": 0.0,
+        "patient": {
+          "n_patients": 15,
+          "mean": 0.04833903470509783,
+          "median": 0.0395398410602796,
+          "wilcoxon_p": 0.0042724609375,
+          "n_pos": 12,
+          "n_neg": 3
+        }
+      },
+      "zf_ssim_diffindiff": {
+        "n_regions": 97,
+        "n_patients": 15,
+        "mean": 0.06262588276842582,
+        "ci_lo": 0.028203758773374343,
+        "ci_hi": 0.0894533779147271,
+        "bootstrap_p": 0.0016,
+        "patient": {
+          "n_patients": 15,
+          "mean": 0.04498764171814549,
+          "median": 0.043038352746842985,
+          "wilcoxon_p": 0.0067138671875,
+          "n_pos": 13,
+          "n_neg": 2
+        }
+      },
+      "zf_psnr_vs_size": {
+        "n_regions": 97,
+        "n_patients": 15,
+        "mean": 0.766401197341962,
+        "ci_lo": -0.04139008626025963,
+        "ci_hi": 1.5627665659382164,
+        "bootstrap_p": 0.0616,
+        "patient": {
+          "n_patients": 15,
+          "mean": 1.3430925896277386,
+          "median": 0.9042686930061414,
+          "wilcoxon_p": 0.02557373046875,
+          "n_pos": 12,
+          "n_neg": 3
+        }
+      },
+      "zf_psnr_vs_app": {
+        "n_regions": 97,
+        "n_patients": 15,
+        "mean": 0.38730200202893245,
+        "ci_lo": -0.33452204089865933,
+        "ci_hi": 1.2102356293074066,
+        "bootstrap_p": 0.3028,
+        "patient": {
+          "n_patients": 15,
+          "mean": 0.8127777814198763,
+          "median": 0.77706799678589,
+          "wilcoxon_p": 0.22930908203125,
+          "n_pos": 9,
+          "n_neg": 6
+        }
+      },
+      "zf_psnr_vs_placebo": {
+        "n_regions": 95,
+        "n_patients": 15,
+        "mean": 1.9044115145892042,
+        "ci_lo": 0.6903928783014853,
+        "ci_hi": 3.3278267039127103,
+        "bootstrap_p": 0.0,
+        "patient": {
+          "n_patients": 15,
+          "mean": 2.1973333565430617,
+          "median": 1.700169042469664,
+          "wilcoxon_p": 0.0067138671875,
+          "n_pos": 11,
+          "n_neg": 4
+        }
+      },
+      "zf_psnr_diffindiff": {
+        "n_regions": 95,
+        "n_patients": 15,
+        "mean": 1.8195945301870955,
+        "ci_lo": 0.607368428351686,
+        "ci_hi": 2.838980927833456,
+        "bootstrap_p": 0.0064,
+        "patient": {
+          "n_patients": 15,
+          "mean": 1.8128551929947727,
+          "median": 2.5408308886476365,
+          "wilcoxon_p": 0.01806640625,
+          "n_pos": 11,
+          "n_neg": 4
+        }
+      }
+    },
+    "Patellar Retinaculum - High grade sprain": {
+      "n_regions": 6,
+      "n_patients": 1,
+      "highlighted": false,
+      "cg_ssim_vs_size": {
+        "n_regions": 6,
+        "n_patients": 1,
+        "mean": 0.10002592267447934,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_ssim_vs_app": {
+        "n_regions": 6,
+        "n_patients": 1,
+        "mean": 0.02211400704080006,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_ssim_vs_placebo": {
+        "n_regions": 6,
+        "n_patients": 1,
+        "mean": -0.04331743551003089,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_ssim_diffindiff": {
+        "n_regions": 6,
+        "n_patients": 1,
+        "mean": 0.021609049963533526,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_psnr_vs_size": {
+        "n_regions": 6,
+        "n_patients": 1,
+        "mean": 3.9048462622017333,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_psnr_vs_app": {
+        "n_regions": 6,
+        "n_patients": 1,
+        "mean": 0.7358655531099293,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_psnr_vs_placebo": {
+        "n_regions": 6,
+        "n_patients": 1,
+        "mean": 1.972663817576727,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "cg_psnr_diffindiff": {
+        "n_regions": 6,
+        "n_patients": 1,
+        "mean": 2.362027643255878,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_ssim_vs_size": {
+        "n_regions": 6,
+        "n_patients": 1,
+        "mean": 0.04369002246258191,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_ssim_vs_app": {
+        "n_regions": 6,
+        "n_patients": 1,
+        "mean": 0.005750324703721887,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_ssim_vs_placebo": {
+        "n_regions": 6,
+        "n_patients": 1,
+        "mean": 0.05023794588892139,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_ssim_diffindiff": {
+        "n_regions": 6,
+        "n_patients": 1,
+        "mean": 0.033078237619338514,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_psnr_vs_size": {
+        "n_regions": 6,
+        "n_patients": 1,
+        "mean": 2.225220741732238,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_psnr_vs_app": {
+        "n_regions": 6,
+        "n_patients": 1,
+        "mean": 1.4170624013043494,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_psnr_vs_placebo": {
+        "n_regions": 6,
+        "n_patients": 1,
+        "mean": 4.42435708456894,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      },
+      "zf_psnr_diffindiff": {
+        "n_regions": 6,
+        "n_patients": 1,
+        "mean": 3.1441833200129685,
+        "note": "fewer than 3 patients: no CI or p-value reported"
+      }
+    }
+  }
+}
